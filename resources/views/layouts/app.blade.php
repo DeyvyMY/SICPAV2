@@ -9,6 +9,11 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>SICPA  v2</title>
+    <style type="text/css">
+        .content {
+            background-image: url("{{asset('assets/img/textura.jpg')}}");
+        }
+    </style>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -36,7 +41,54 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Monitoreo</a>
+                            <ul class="dropdown-menu" role= "menu">
+                                <li><a href="">Inventario</a></li>
+                                <li><a href="">Compras</a></li>
+                                <li><a href="">Ventas</a></li>
+                                <li><a href="">Gastos</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Operaciones</a>
+                            <ul class="dropdown-menu" role= "menu">
+                                <li><a href="">Compras</a></li>
+                                <li><a href="">Ventas</a></li>
+                                <li><a href="">Notas de Crédito</a></li>
+                                <li><a href="">Notas de Débito</a></li>
+                                <li><a href="">Prodcutos</a></li>
+                                <li><a href="">Clientes</a></li>
+                                <li><a href="">Proveedores</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Reportes</a>
+                            <ul class="dropdown-menu" role= "menu">
+                                <li><a href="">Compras</a></li>
+                                <li><a href="">Ventas</a></li>
+                                <li><a href="">Notas de Crédito</a></li>
+                                <li><a href="">Notas de Débito</a></li>
+                                <li><a href="">Prodcutos</a></li>
+                                <li><a href="">Clientes</a></li>
+                                <li><a href="">Proveedores</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Kardex</a>
+                            <ul class="dropdown-menu" role= "menu">
+                                <li><a href="">Por Producto</a></li>
+                                <li><a href="">Por proveedor</a></li>
+                                <li><a href="">Por proveedores</a></li>
+
+                            </ul>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
