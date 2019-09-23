@@ -43,9 +43,12 @@
 	<script src="{{ asset('global_assets/js/plugins/forms/selects/bootstrap_multiselect.js') }}"></script>
 	<script src="{{ asset('global_assets/js/plugins/ui/moment/moment.min.js') }}"></script>
 	<script src="{{ asset('global_assets/js/plugins/pickers/daterangepicker.js') }}"></script>
+	<script src="{{ asset('global_assets/js/plugins/forms/styling/uniform.min.js') }}"></script>
+	<script src="{{ asset('global_assets/js/plugins/forms/styling/switchery.min.js') }}"></script>
+	<script src="{{ asset('global_assets/js/plugins/forms/styling/switch.min.js') }}"></script>
 
 	<script src="{{ asset('assets/js/app.js') }}"></script>
-	<script src="{{ asset('global_assets/js/demo_pages/dashboard.js') }}"></script>
+	<script src="{{ asset('global_assets/js/demo_pages/form_checkboxes_radios.js') }}"></script>
 	<script src="{{ asset('global_assets/js/demo_pages/login.js') }}"></script>
 
 	<!-- /theme JS files -->

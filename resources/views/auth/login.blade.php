@@ -52,14 +52,13 @@
                                     @endif
                                 </div>
 
-                                <div class="form-group d-flex align-items-center">
-                                    <div class="form-check mb-0">
+                                <div class="form-group d-flex align-items-center pt-2">
+                                    <div class="form-check">
                                         <label class="form-check-label" >
                                             <div class="uniform-checker"><span class="checked"><input type="checkbox" name="remember" class="form-input-styled" checked="" data-fouc=""></span></div>
                                             Recordar contraseña
                                         </label>
                                     </div>
-
                                     <a href="{{ route('password.request') }}" class="ml-auto">Olvidaste tu contraseña?</a>
                                 </div>
 

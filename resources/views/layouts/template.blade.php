@@ -111,7 +111,7 @@
 		<div class="navbar-collapse collapse" id="navbar-navigation">
 			<ul class="navbar-nav navbar-nav-highlight">
 				<li class="nav-item">
-					<a href="#" class="navbar-nav-link active">
+					<a href="dashboard" class="navbar-nav-link active">
 						<i class="icon-stats-bars3"></i>
 						visualización
 					</a>
