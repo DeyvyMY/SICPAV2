@@ -241,19 +241,19 @@
 									<div class="dropdown-item-group mb-3 mb-md-0">
 										<ul class="list-unstyled">
 											<li>
-												<a href="#" class="dropdown-item rounded">
+												<a href="/compras" class="dropdown-item rounded">
 													<i class="icon-cart-add2"></i>
 													Compras
 												</a>
 											</li>
 											<li>
-												<a href="#" class="dropdown-item rounded">
+												<a href="/compras/notascreditorecibidas" class="dropdown-item rounded">
 													<i class="icon-enter2"></i>
 													Notas de Crédito Recibidas
 												</a>
 											</li>
 											<li>
-												<a href="#" class="dropdown-item rounded">
+												<a href="/compras/notasdebitorecibidas" class="dropdown-item rounded">
 													<i class="icon-enter"></i>
 													Notas de Débito Recibidas
 												</a>
@@ -267,19 +267,19 @@
 									<div class="dropdown-item-group mb-3 mb-md-0">
 										<ul class="list-unstyled">
 											<li>
-												<a href="#" class="dropdown-item rounded">
+												<a href="/ventas" class="dropdown-item rounded">
 													<i class="icon-cart-remove"></i>
 													Ventas
 												</a>
 											</li>
 											<li>
-												<a href="#" class="dropdown-item rounded">
+												<a href="/ventas/notascreditoemitidas" class="dropdown-item rounded">
 													<i class="icon-exit2"></i>
 													Notas de Crédito Emitidas
 												</a>
 											</li>
 											<li>
-												<a href="#" class="dropdown-item rounded">
+												<a href="/ventas/notasdebitoemitidas" class="dropdown-item rounded">
 													<i class="icon-exit"></i>
 													Notas de Débito Emitidas
 												</a>
