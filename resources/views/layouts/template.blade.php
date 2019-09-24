@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<title>SICPA - V2</title>
 
 	<!-- Global stylesheets -->
@@ -51,7 +52,7 @@
 	@yield('javascript')
 </head>
 
-<body>
+<body >
 
 	<!-- Main navbar -->
 	<div class="navbar navbar-expand-md navbar-dark" style="background-color: #303030">
@@ -111,7 +112,7 @@
 		<div class="navbar-collapse collapse" id="navbar-navigation">
 			<ul class="navbar-nav navbar-nav-highlight">
 				<li class="nav-item">
-					<a href="dashboard" class="navbar-nav-link active">
+					<a href="/dashboard" class="navbar-nav-link active">
 						<i class="icon-stats-bars3"></i>
 						visualización
 					</a>
@@ -156,7 +157,7 @@
 												</a>
 											</li>
 											<li>
-												<a href="#" class="dropdown-item rounded">
+												<a href="/categories" class="dropdown-item rounded">
 													<i class="mi-local-offer"></i>
 													Categoría de Producto
 												</a>
@@ -241,19 +242,19 @@
 									<div class="dropdown-item-group mb-3 mb-md-0">
 										<ul class="list-unstyled">
 											<li>
-												<a href="#" class="dropdown-item rounded">
+												<a href="/compras" class="dropdown-item rounded">
 													<i class="icon-cart-add2"></i>
 													Compras
 												</a>
 											</li>
 											<li>
-												<a href="#" class="dropdown-item rounded">
+												<a href="/compras/notascreditorecibidas" class="dropdown-item rounded">
 													<i class="icon-enter2"></i>
 													Notas de Crédito Recibidas
 												</a>
 											</li>
 											<li>
-												<a href="#" class="dropdown-item rounded">
+												<a href="/compras/notasdebitorecibidas" class="dropdown-item rounded">
 													<i class="icon-enter"></i>
 													Notas de Débito Recibidas
 												</a>
@@ -267,19 +268,19 @@
 									<div class="dropdown-item-group mb-3 mb-md-0">
 										<ul class="list-unstyled">
 											<li>
-												<a href="#" class="dropdown-item rounded">
+												<a href="/ventas" class="dropdown-item rounded">
 													<i class="icon-cart-remove"></i>
 													Ventas
 												</a>
 											</li>
 											<li>
-												<a href="#" class="dropdown-item rounded">
+												<a href="/ventas/notascreditoemitidas" class="dropdown-item rounded">
 													<i class="icon-exit2"></i>
 													Notas de Crédito Emitidas
 												</a>
 											</li>
 											<li>
-												<a href="#" class="dropdown-item rounded">
+												<a href="/ventas/notasdebitoemitidas" class="dropdown-item rounded">
 													<i class="icon-exit"></i>
 													Notas de Débito Emitidas
 												</a>
@@ -347,8 +348,15 @@
 	</div>
 	<!-- /secondary navbar -->
 
+
+
+
 	<!-- Page content -->
-	<div class="page-content pt-0">
+	<!-- Page content -->
+	<!-- Page content -->
+	<!-- Page content -->
+	<!-- Page content -->
+	<div id="app" class="page-content pt-0">
 
 		<!-- Main content -->
 		<div class="content-wrapper">
@@ -385,6 +393,8 @@
 	</div>
 	<!-- /footer -->
 
+	<!-- Scripts -->
+	<script src="{{ asset('js/app.js') }}"></script>
 </body>
 @yield('javascriptfinal')
 </html>

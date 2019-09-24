@@ -19,4 +19,17 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
 Route::get('/products', 'ProductocsController@index')->name('products');
+
+//Rutas Ingresos
+Route::get('/compras', 'ComprasController@index')->name('compras');
+Route::get('/compras/notascreditorecibidas', 'NotasCreditoRecibidasController@index')->name('notascreditorecibidas');
+Route::get('/compras/notasdebitorecibidas', 'NotasDebitoRecibidasController@index')->name('notasdebitorecibidas');
+//Rutas Salidas
+Route::get('/ventas', 'VentasController@index')->name('ventas');
+Route::get('/ventas/notascreditoemitidas', 'NotasCreditoEmitidasController@index')->name('notascreditoemitidas');
+Route::get('/ventas/notasdebitoemitidas', 'NotasDebitoEmitidasController@index')->name('notasdebitoemitidas');
+
+
+Route::resource('categories', 'CategoriesController');

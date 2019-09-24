@@ -21,4 +21,15 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'password' => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),
     ];
+
+});
+$factory->define(App\Categories::class, function (Faker\Generator $faker) {
+
+
+    return [
+        'name' => $faker->name,
+        'description' => $faker->text,
+        "family_id"=>str_random(10),
+    ];
+
 });
