@@ -1,9 +1,11 @@
 <template>
     <div>
-        <button type="button" class="btn btn-primary" v-on:click="onAdd()"><i class="icon-cog3 mr-2"></i> With icon
+        <button type="button" class="btn btn-primary" v-on:click="onAdd()">
+            <i class="icon-cog3 mr-2"></i>
+            Crear un {{'crud'}}
+
         </button>
 
-        <button v-on:click="showModal()"> show modal </button>
         <div class="table-responsive">
             <table class="table table-xs">
                 <thead>
@@ -32,27 +34,51 @@
 
         <modal  v-show="isModalVisible"
                 @close="closeModal"
-        ></modal>
+                :method="method"
+                :action="action"
+        >
+            <!-- en en slot body del modal se va poner el slot de crud-->
+            <div  slot="body"  >
+
+                <slot :item="item" >
+                </slot>
+
+            </div>
+
+
+        </modal>
 
     </div>
 </template>
-
+<!--
+POST          /users                      store   users.store
+PUT|PATCH     /users/{user}               update  users.update
+-->
 <script>
     export default {
         name: "crud",
-        props:["items"],
+        props:["items","crudName"],
         data: function () {
             return {
                 itemsData: [],
                 isModalVisible: false,
+                method:"",
+                action:"",
+                item:{},
             }
         },
         methods: {
             onAdd() {
+
+                this.item=this.itemsData[0];
+                console.log(this.item);
                 // show Modal
-                this.itemsData.push({"id": 100, "descripction": "werwerwer", "otro": "3333333333"});
+                this.showModal();
+
+
             },
             onUpdate(index, thought) {
+
                 this.itemsData[index] = thought;
             },
             onDelete(index) {
@@ -60,6 +86,9 @@
             },
             showModal(){
                 this.isModalVisible=true;
+            },
+            closeModal(){
+                this.isModalVisible=false;
             }
         },
         mounted() {
@@ -68,6 +97,7 @@
                 this.itemsData.push(this.items[i])
             }*/
             this.itemsData=this.items;
+            this.item=this.items[0];
 
         }
 

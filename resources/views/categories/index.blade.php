@@ -42,7 +42,12 @@
 
                                 <div class="card-body">
 
-                                    <crud :items="{{$categories}}" ></crud>
+                                    <crud :items="{{$categories}}" :crud-name="categories"  >
+
+                                        <form-category  :item="item" ></form-category>
+
+
+                                    </crud>
 
                                 </div>
                             </div>

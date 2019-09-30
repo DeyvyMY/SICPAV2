@@ -8,6 +8,10 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+import Vue from 'vue';
+
+import Vuelidate from 'vuelidate';
+Vue.use(Vuelidate);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -19,6 +23,9 @@ Vue.component('example', require('./components/Example.vue'));
 Vue.component('item-crud', require('./components/ItemCrud.vue'));
 Vue.component('crud', require('./components/Crud.vue'));
 Vue.component('modal', require('./components/Modal.vue'));
+
+Vue.component('form-category', require('./forms/Category.vue'));
+
 const app = new Vue({
     el: '#app'
 });

@@ -2,20 +2,32 @@
     <div id="modal_form_horizontal" class="modal fade show" tabindex="-1" style="display: block; padding-right: 15px;">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
+
+                <!--  header -->
                 <div class="modal-header">
-                    <h5 class="modal-title">Horizontal form</h5>
+
+                    <slot name="header">
+                        <label> this is header</label>
+                    </slot>
                     <button type="button" class="close" v-on:click="close" >×</button>
                 </div>
-                <div class="modal-body" v-html="form">
+
+
+                <!-- body -->
+                <div class="modal-body" >
+
+                    <slot name="body">
+                        <i class="icon-spinner2 spinner"></i>
+                    </slot>
                 </div>
-                <slot name="header">
-                </slot>
 
-                <slot name="body">
-                </slot>
+                <!-- footer -->
+                <div class="modal-footer">
+                    <slot name="footer">
+                        <label> this is footer</label>
+                    </slot>
+                </div>
 
-                <slot name="footer">
-                </slot>
             </div>
         </div>
     </div>
@@ -25,22 +37,14 @@
 
     export default {
         name:"modal",
-        props:["item","formURL"],
+        props:["item","method","action"],
         data:()=>{
             return({
-                form:'<i class="icon-spinner2 spinner"></i>'
 
             });
         },
         mounted() {
 
-            if(this.formURL){
-                axios
-                    .get('formURL')
-                    .then((response) => {
-                        form='+response+'
-                    })
-            }
         },
         methods: {
             close() {
