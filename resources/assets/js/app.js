@@ -16,7 +16,9 @@ window.Vue = require('vue');
  */
 
 Vue.component('example', require('./components/Example.vue'));
-Vue.component('item', require('./components/Item.vue'));
+Vue.component('item-crud', require('./components/ItemCrud.vue'));
+Vue.component('crud', require('./components/Crud.vue'));
+Vue.component('modal', require('./components/Modal.vue'));
 const app = new Vue({
     el: '#app'
 });

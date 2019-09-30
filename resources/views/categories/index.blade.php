@@ -21,7 +21,8 @@
                 <!-- Content area -->
                 <div class="content">
 
-                    <item></item>
+
+
                     <!-- Main charts -->
                     <div class="row">
                         <div class="col-xl-12">
@@ -40,41 +41,8 @@
                                 </div>
 
                                 <div class="card-body">
-                                    <div class="table-responsive">
-                                        <table class="table table-xs">
-                                            <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Nombre</th>
-                                                <th>Descripcion</th>
-                                                <th>Operaciones</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Eugene</td>
-                                                <td>Kopyov</td>
-                                                <td>@Kopyov</td>
-                                            </tr>
-                                            @foreach($categories as $category)
-                                                <tr>
-                                                    <td>{{$category->id}}</td>
-                                                    <td>{{$category->name}}</td>
-                                                    <td>{{$category->description}}</td>
-                                                    <td>
-                                                        <div class="list-icons">
-                                                            <a href="#" class="list-icons-item text-primary-600"><i class="icon-pencil7"></i></a>
-                                                            <a href="#" class="list-icons-item text-danger-600"><i class="icon-trash"></i></a>
-                                                            <a href="#" class="list-icons-item text-teal-600"><i class="icon-cog6"></i></a>
-                                                        </div>
-                                                    </td>
 
-                                                </tr>
-                                            @endforeach
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                    <crud :items="{{$categories}}" ></crud>
 
                                 </div>
                             </div>

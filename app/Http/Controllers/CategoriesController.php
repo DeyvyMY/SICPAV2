@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Categories;
+use http\Env\Response;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class CategoriesController extends Controller
 {
@@ -59,6 +61,9 @@ class CategoriesController extends Controller
     public function show(Categories $categories)
     {
         //
+        return new \Illuminate\Http\Response("FFFFF");
+
+
     }
 
     /**
@@ -69,7 +74,10 @@ class CategoriesController extends Controller
      */
     public function edit(Categories $categories)
     {
-        //
+        // GET           /users/{user}/edit          edit    users.edit
+        //return view("categories.editForm");
+        return response()->view("categories.editForm");
+
     }
 
     /**
