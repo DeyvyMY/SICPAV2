@@ -2,10 +2,11 @@
     <div>
         <button type="button" class="btn btn-primary" v-on:click="onAdd()">
             <i class="icon-cog3 mr-2"></i>
-            Crear un {{'crud'}}
 
+            <label v-text="crudName"></label>
         </button>
 
+        <h1>{{cont}}</h1>
         <div class="table-responsive">
             <table class="table table-xs">
                 <thead>
@@ -17,7 +18,21 @@
                 </tr>
                 </thead>
                 <tbody>
-                <item-crud
+
+                <tr v-for="item in itemsData"
+                    :key="item.id" >
+                    <td v-for="(value, key) in item">{{value}}</td>
+                    <td>
+                        <div class="list-icons">
+                            <a href="#" class="list-icons-item text-primary-600" v-on:click="onClickUpdate()"><i class="icon-pencil7"></i></a>
+                            <a href="#" class="list-icons-item text-danger-600"  v-on:click="onClickDelete()"><i class="icon-trash"></i></a>
+                            <a href="#" class="list-icons-item text-teal-600" v-on:click="addCount()"><i class="icon-cog6"></i></a>
+                        </div>
+                    </td>
+
+                </tr>
+
+                <!--<item-crud
                         v-for="item in itemsData"
                         :key="item.id"
                         :item="item"
@@ -25,8 +40,7 @@
                         @delete="onDelete(index)">
 
                     >
-                </item-crud>
-
+                </item-crud>-->
 
                 </tbody>
             </table>
@@ -38,13 +52,9 @@
                 :action="action"
         >
             <!-- en en slot body del modal se va poner el slot de crud-->
-            <div  slot="body"  >
-
-                <slot :item="item" >
-                </slot>
-
+            <div slot="body"  >
+              <slot :item="item"> </slot>
             </div>
-
 
         </modal>
 
@@ -65,23 +75,23 @@ PUT|PATCH     /users/{user}               update  users.update
                 method:"",
                 action:"",
                 item:{},
+                cont:0,
             }
         },
         methods: {
             onAdd() {
 
                 this.item=this.itemsData[0];
-                console.log(this.item);
                 // show Modal
                 this.showModal();
 
 
             },
-            onUpdate(index, thought) {
+            onClickUpdate(index, thought) {
 
                 this.itemsData[index] = thought;
             },
-            onDelete(index) {
+            onClickDelete(index) {
                 this.itemsData.splice(index, 1);
             },
             showModal(){
@@ -89,6 +99,9 @@ PUT|PATCH     /users/{user}               update  users.update
             },
             closeModal(){
                 this.isModalVisible=false;
+            },
+            addCount(){
+                this.cont=this.cont+1;
             }
         },
         mounted() {

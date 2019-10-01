@@ -6,7 +6,7 @@
                 <!--  header -->
                 <div class="modal-header">
 
-                    <slot name="header">
+                    <slot  name="header">
                         <label> this is header</label>
                     </slot>
                     <button type="button" class="close" v-on:click="close" >×</button>
@@ -16,8 +16,8 @@
                 <!-- body -->
                 <div class="modal-body" >
 
-                    <slot name="body">
-                        <i class="icon-spinner2 spinner"></i>
+                    <slot name="body"  >
+                        <i class="icon-spinner2 spinner">{{item}} default body </i>
                     </slot>
                 </div>
 
@@ -44,7 +44,7 @@
             });
         },
         mounted() {
-
+            this.item="FFFFFFFFFFFFFFFFFFFFFFFFF";
         },
         methods: {
             close() {

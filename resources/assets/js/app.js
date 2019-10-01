@@ -19,12 +19,12 @@ Vue.use(Vuelidate);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
-Vue.component('item-crud', require('./components/ItemCrud.vue'));
-Vue.component('crud', require('./components/Crud.vue'));
-Vue.component('modal', require('./components/Modal.vue'));
+Vue.component('example', require('./components/Example.vue').default);
+Vue.component('item-crud', require('./components/ItemCrud.vue').default);
+Vue.component('crud', require('./components/Crud.vue').default);
+Vue.component('modal', require('./components/Modal.vue').default);
 
-Vue.component('form-category', require('./forms/Category.vue'));
+Vue.component('form-category', require('./forms/Category.vue').default);
 
 const app = new Vue({
     el: '#app'

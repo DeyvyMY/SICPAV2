@@ -1,7 +1,8 @@
 <template>
     <div>
         <form @submit.prevent="handleSubmit">
-
+            <h2 v-text="item">{{value}}</h2>
+            <h4>---</h4>
             <span v-for="(value, key) in item">{{value}}</span>
             <h4>---</h4>
             <span v-for="(value, key) in categoryData">{{value}}</span>
@@ -33,6 +34,7 @@
                 </div>
 
             </div>
+
             <div class="form-group row">
                 <label class="col-form-label col-lg-2 font-weight-semibold ">* family_id</label>
                 <div class="col-lg-10">
@@ -62,18 +64,22 @@
         props:["category","item"],
         data() {
             return {
-                name: '',
-                description: '',
-                family_id:'',
+                name: this.item.name,
+                description: this.item.description,
+                family_id:this.item.family_id,
                 submitted: false,
                 categoryData:{},
+
             }
         },
         mounted() {
             console.log("mounted category form");
-            console.log(this.item);
-            this.categoryData=this.item;
+            console.log(this.item)
 
+
+        },
+        updated(){
+            console.log("updated");
         },
         methods: {
             handleSubmit(e) {
@@ -81,6 +87,13 @@
 
                 // if complete
                 //this.$emit('onCompleteForm');
+            },
+            onShowForm(){
+
+                this.categoryData=this.item;
+                this.name=this.item.name;
+                this.description=this.item.description;
+                this.family_id=this.item.family_id;
             }
         },
         validations: {
