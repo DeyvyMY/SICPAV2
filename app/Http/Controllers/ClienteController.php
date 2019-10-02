@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Entidad;
 use Illuminate\Http\Request;
 
 class ClienteController extends Controller
@@ -13,7 +14,9 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        return view('Entidades.clientes.mostrar');
+        $entidades = Entidad::where('tent_id', '2')->get();
+
+        return view('Entidades.clientes.mostrar', ['entidades' => $entidades]);
     }
 
     /**
@@ -21,9 +24,25 @@ class ClienteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+
+        Entidad::create(
+            [
+                'ent_ruc'    => strtoupper($request->get('ent_ruc')),
+                'ent_rz'     => strtoupper($request->get('ent_rz')),
+                'ent_dir'    => strtoupper($request->get('ent_dir')),
+                'ent_ciu'    => strtoupper($request->get('ent_ciu')),
+                'ent_prov'   => "Arequipa",
+                'tent_id'    => 2,
+                'ent_tel'    => strtoupper($request->get('ent_tel')),
+                'ent_cont'   => strtoupper($request->get('ent_cont')),
+                'ent_ctel'   => strtoupper($request->get('ent_ctel')),
+                'ent_dpto'   => "Arequipa",
+                'ent_correo' => $request->get('ent_correo'),
+            ]
+        );
+        return "Cliente creado";
     }
 
     /**
@@ -68,7 +87,7 @@ class ClienteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
     }
 
     /**
@@ -77,8 +96,12 @@ class ClienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete(Request $request)
     {
-        //
+        $ent_id  = $request->get('ent_id');
+        $entidad = Entidad::find($ent_id);
+        $entidad->delete();
+
+        return "eliminado";
     }
 }

@@ -24,9 +24,25 @@ class ProveedorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+
+        Entidad::create(
+            [
+                'ent_ruc'    => strtoupper($request->get('ent_ruc')),
+                'ent_rz'     => strtoupper($request->get('ent_rz')),
+                'ent_dir'    => strtoupper($request->get('ent_dir')),
+                'ent_ciu'    => strtoupper($request->get('ent_ciu')),
+                'ent_prov'   => "Arequipa",
+                'tent_id'    => 1,
+                'ent_tel'    => strtoupper($request->get('ent_tel')),
+                'ent_cont'   => strtoupper($request->get('ent_cont')),
+                'ent_ctel'   => strtoupper($request->get('ent_ctel')),
+                'ent_dpto'   => "Arequipa",
+                'ent_correo' => $request->get('ent_correo'),
+            ]
+        );
+        return "Proveedor creado";
     }
 
     /**
@@ -80,8 +96,13 @@ class ProveedorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete(Request $request)
     {
-        //
+
+        $ent_id  = $request->get('ent_id');
+        $entidad = Entidad::find($ent_id);
+        $entidad->delete();
+
+        return "eliminado";
     }
 }
