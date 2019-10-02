@@ -55,7 +55,11 @@
                                 <div class="form-group d-flex align-items-center pt-2">
                                     <div class="form-check">
                                         <label class="form-check-label" >
-                                            <div class="uniform-checker"><span class="checked"><input type="checkbox" name="remember" class="form-input-styled" checked="" data-fouc=""></span></div>
+
+                                            <span class="checked">
+                                                <input type="checkbox" name="remember" class="form-input-styled" checked="" data-fouc="">
+                                            </span>
+
                                             Recordar contraseña
                                         </label>
                                     </div>

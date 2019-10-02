@@ -5,7 +5,6 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<title>SICPA - V2</title>
 
 	<!-- Global stylesheets -->
@@ -177,13 +176,13 @@
 									<div class="dropdown-item-group mb-3 mb-md-0">
 										<ul class="list-unstyled">
 											<li>
-												<a href="#" class="dropdown-item rounded">
+												<a href="/proveedores" class="dropdown-item rounded">
 													<i class="icon-user-tie"></i>
 													Proveedores
 												</a>
 											</li>
 											<li>
-												<a href="#" class="dropdown-item rounded">
+												<a href="/clientes" class="dropdown-item rounded">
 													<i class="mi-people"></i>
 													Clientes
 												</a>
