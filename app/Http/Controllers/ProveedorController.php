@@ -16,7 +16,7 @@ class ProveedorController extends Controller
     {
         $entidades = Entidad::where('tent_id', '1')->get();
 
-        return view('entidades.proveedores.mostrar', ['entidades' => $entidades]);
+        return view('Entidades.proveedores.mostrar', ['entidades' => $entidades]);
     }
 
     /**
