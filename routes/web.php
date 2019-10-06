@@ -30,6 +30,12 @@ Route::get('/compras/notasdebitorecibidas', 'NotasDebitoRecibidasController@inde
 Route::get('/ventas', 'VentasController@index')->name('ventas');
 Route::get('/ventas/notascreditoemitidas', 'NotasCreditoEmitidasController@index')->name('notascreditoemitidas');
 Route::get('/ventas/notasdebitoemitidas', 'NotasDebitoEmitidasController@index')->name('notasdebitoemitidas');
-
-
-Route::resource('categories', 'CategoriesController');
+//rutas producto
+Route::get('/categories', 'CategoriesController@index');
+//Rutas Entidades
+Route::get('/proveedores', 'ProveedorController@index');
+Route::get('/proveedores/create', 'ProveedorController@create');
+Route::get('/proveedores/delete', 'ProveedorController@delete');
+Route::get('/clientes', 'ClienteController@index');
+Route::get('/clientes/create', 'ClienteController@create');
+Route::get('/clientes/delete', 'ClienteController@delete');
