@@ -2134,13 +2134,48 @@ var config = {
 
       return update;
     }(),
-    showResultOf: function () {
-      var _showResultOf = _asyncToGenerator(
+    detele: function () {
+      var _detele = _asyncToGenerator(
       /*#__PURE__*/
-      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4(request) {
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4(idItem, item) {
+        var res, resItem;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
           while (1) {
             switch (_context4.prev = _context4.next) {
+              case 0:
+                //DELETE        /users/{user}               destroy users.destroy
+                console.log("delete");
+                console.log(item);
+                _context4.next = 4;
+                return axios["delete"]("api/" + this.crudName + "/" + idItem, item, config);
+
+              case 4:
+                res = _context4.sent;
+                resItem = this.getDataOfResponse(res);
+                this.addToList(resItem, this.itemIndex);
+                return _context4.abrupt("return", true);
+
+              case 8:
+              case "end":
+                return _context4.stop();
+            }
+          }
+        }, _callee4, this);
+      }));
+
+      function detele(_x7, _x8) {
+        return _detele.apply(this, arguments);
+      }
+
+      return detele;
+    }(),
+    showResultOf: function () {
+      var _showResultOf = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee5(request) {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee5$(_context5) {
+          while (1) {
+            switch (_context5.prev = _context5.next) {
               case 0:
                 try {
                   this.loading = true;
@@ -2160,13 +2195,13 @@ var config = {
 
               case 1:
               case "end":
-                return _context4.stop();
+                return _context5.stop();
             }
           }
-        }, _callee4, this);
+        }, _callee5, this);
       }));
 
-      function showResultOf(_x7) {
+      function showResultOf(_x9) {
         return _showResultOf.apply(this, arguments);
       }
 

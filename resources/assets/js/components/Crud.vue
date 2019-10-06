@@ -192,7 +192,15 @@ PUT|PATCH     /users/{user}               update  users.update
                 this.addToList(resItem, this.itemIndex);
                 return true;
             },
-
+            async detele(idItem, item){
+                //DELETE        /users/{user}               destroy users.destroy
+                console.log("delete");
+                console.log(item);
+                let res = await axios.delete("api/" + this.crudName + "/" + idItem, item, config);
+                let resItem = this.getDataOfResponse(res);
+                this.addToList(resItem, this.itemIndex);
+                return true;
+            },
             async showResultOf(request) {
                 try {
                     this.loading = true;

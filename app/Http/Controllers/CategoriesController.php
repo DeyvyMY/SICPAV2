@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\ValidationException;
 use Illuminate\View\View;
 use Illuminate\Http\JsonResponse;
+use Symfony\Component\Translation\Exception\NotFoundResourceException;
 
 class CategoriesController extends Controller
 {
@@ -64,9 +65,8 @@ class CategoriesController extends Controller
                 ["errors" => $exception->validator->getMessageBag()],
                 JsonResponse::HTTP_UNPROCESSABLE_ENTITY);
         }
-        return response()->json(["Category" => $category]);
-
-
+        return response()->json(["Category" => $category],
+            JsonResponse::HTTP_CREATED);
     }
 
     /**
@@ -104,9 +104,10 @@ class CategoriesController extends Controller
      * @param \App\Categories $categories
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Categories $categories)
+    public function update(Request $request, $id)
     {
         try {
+            $categories=Categories::find($id);
             $categories->validateAndFill($request->all());
             $categories->save();
         } catch (ValidationException $exception) {
@@ -115,7 +116,8 @@ class CategoriesController extends Controller
                 ["errors" => $exception->validator->getMessageBag()],
                 JsonResponse::HTTP_UNPROCESSABLE_ENTITY);
         }
-        return response()->json(["Category" => $categories]);
+        return response()->json(["Category" => $categories],
+        JsonResponse::HTTP_OK);
 
     }
 
@@ -125,10 +127,13 @@ class CategoriesController extends Controller
      * @param \App\Categories $categories
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Categories $categories)
+    public function destroy($id)
     {
         //
         try {
+            $categories=Categories::find($id);
+            if(!$categories)
+                throw new NotFoundResourceException("Unit Measure $id Not Found");
             $categories->delete();
         } catch (\Exception $exception) {
 
@@ -136,6 +141,6 @@ class CategoriesController extends Controller
                 ["errors" => $exception->getMessage()],
                 JsonResponse::HTTP_BAD_REQUEST);
         }
-        return response()->json(["Category" => null]);
+        return response()->json(["Category" => null],JsonResponse::HTTP_NO_CONTENT);
     }
 }
