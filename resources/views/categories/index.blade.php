@@ -42,15 +42,30 @@
 
                                 <div class="card-body">
 
-                                    <crud :items="{{$categories}}" :crud-name="categories"   >
 
-                                        <template scope="props" >
+                                  {{--  <crud :items="{{$categories}}" crud-name="UnitProducts" >
 
-                                           <form-category :item="props.item"  ></form-category>
+                                        <template  #form="{ on,actions }" >
+                                            <form-unit-product  v-bind="{ on ,actions }"   ></form-unit-product>
+                                        </template>
+
+                                    </crud>--}}
+
+
+                                    <crud :items="{{$categories}}" crud-name="categories"   >
+
+                                        <template  #form="{ on,actions }" >
+
+                                            <form-category  v-bind="{ on ,actions }"   ></form-category>
 
                                         </template>
 
 
+                                       {{-- <template  slot-scope="{item,isValidForm}" >
+
+                                            <form-category :item="item" :isValidForm="isValidForm"   ></form-category>
+
+                                        </template>--}}
 
                                     </crud>
 
@@ -68,3 +83,15 @@
         </div>
     </div>
 @endsection
+<script>
+    import Padre from "../../assets/js/components/padre";
+    export default {
+        components: {Padre}
+    }
+</script>
+<script>
+    import Hijo from "../../assets/js/components/hijo";
+    export default {
+        components: {Hijo}
+    }
+</script>

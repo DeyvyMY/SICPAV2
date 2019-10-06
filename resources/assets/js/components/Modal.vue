@@ -6,19 +6,27 @@
                 <!--  header -->
                 <div class="modal-header">
 
-                    <slot  name="header">
+                    <slot name="header">
                         <label> this is header</label>
+
                     </slot>
-                    <button type="button" class="close" v-on:click="close" >×</button>
+                    <button type="button" class="close" v-on:click="close">×</button>
                 </div>
 
 
                 <!-- body -->
-                <div class="modal-body" >
+                <div class="modal-body">
 
-                    <slot name="body"  >
-                        <i class="icon-spinner2 spinner">{{item}} default body </i>
+                    <!--<slot name="body"  >
+
+                    </slot>-->
+
+
+                    <slot name="body" >
+
                     </slot>
+
+
                 </div>
 
                 <!-- footer -->
@@ -35,21 +43,18 @@
 
 <script>
 
-    export default {
-        name:"modal",
-        props:["item","method","action"],
-        data:()=>{
-            return({
 
-            });
-        },
-        mounted() {
-            this.item="FFFFFFFFFFFFFFFFFFFFFFFFF";
+    export default {
+        name: "modal",
+        props: ["error", "title"],
+        data: () => {
+            return ({});
         },
         methods: {
             close() {
                 this.$emit('close');
             },
+
         },
 
     }

@@ -2,20 +2,22 @@
 
 namespace App;
 
+use App\Utils\BaseModel;
 use Illuminate\Database\Eloquent\Model;
 
-class Categories extends Model
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\ValidationException;
+
+class Categories extends BaseModel
 {
+    protected $fillable = ['name',"description","family_id"];
 
     //
-    protected $rules=[
-      "name"=>"required|max:30",
+    protected $validationRules =[
+      "name"=>"required|max:5",
         "description"=>"max:100"
     ];
 
-    public function validate(){
-
-
-    }
+    protected $hidden = ['created_at','updated_at'];
 
 }

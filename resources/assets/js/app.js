@@ -23,9 +23,13 @@ Vue.component('example', require('./components/Example.vue').default);
 Vue.component('item-crud', require('./components/ItemCrud.vue').default);
 Vue.component('crud', require('./components/Crud.vue').default);
 Vue.component('modal', require('./components/Modal.vue').default);
-
+// Forms
+Vue.component('form-base', require('./forms/Base.vue').default);
 Vue.component('form-category', require('./forms/Category.vue').default);
+Vue.component('form-unit-measure', require('./forms/UnitMeasure').default);
 
+Vue.component('padre', require('./components/padre.vue').default);
+Vue.component('hijo', require('./components/hijo.vue').default);
 const app = new Vue({
     el: '#app'
 });
