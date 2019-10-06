@@ -12,7 +12,6 @@
         </div>
 
 
-
         <div class="page-content pt-0">
 
             <!-- Main content -->
@@ -22,7 +21,6 @@
                 <div class="content">
 
 
-
                     <!-- Main charts -->
                     <div class="row">
                         <div class="col-xl-12">
@@ -30,7 +28,7 @@
                             <!-- Traffic sources -->
                             <div class="card">
                                 <div class="card-header header-elements-inline bg-success-800">
-                                    <h6 class="card-title">Categorias</h6>
+                                    <h6 class="card-title">Unidades de Medida</h6>
                                     <div class="header-elements">
                                         <div class="list-icons">
                                             <a class="list-icons-item" data-action="collapse"></a>
@@ -43,31 +41,14 @@
                                 <div class="card-body">
 
 
-                                  {{--  <crud :items="{{$categories}}" crud-name="UnitProducts" >
+                                    <crud :items="{{$unitMeasure}}" crud-name="unitmeasure">
 
-                                        <template  #form="{ on,actions }" >
-                                            <form-unit-product  v-bind="{ on ,actions }"   ></form-unit-product>
+                                        <template #form="{ on,actions }">
+                                            <form-unit-measure v-bind="{ on ,actions }"></form-unit-measure>
                                         </template>
-
-                                    </crud>--}}
-
-
-                                    <crud :items="{{$categories}}" crud-name="categories"   >
-
-                                        <template  #form="{ on,actions }" >
-
-                                            <form-category  v-bind="{ on ,actions }"   ></form-category>
-
-                                        </template>
-
-
-                                       {{-- <template  slot-scope="{item,isValidForm}" >
-
-                                            <form-category :item="item" :isValidForm="isValidForm"   ></form-category>
-
-                                        </template>--}}
 
                                     </crud>
+
 
                                 </div>
                             </div>
@@ -83,15 +64,3 @@
         </div>
     </div>
 @endsection
-<script>
-    import Padre from "../../assets/js/components/padre";
-    export default {
-        components: {Padre}
-    }
-</script>
-<script>
-    import Hijo from "../../assets/js/components/hijo";
-    export default {
-        components: {Hijo}
-    }
-</script>

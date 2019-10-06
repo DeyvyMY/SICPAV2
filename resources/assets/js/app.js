@@ -8,6 +8,10 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+import Vue from 'vue';
+
+import Vuelidate from 'vuelidate';
+Vue.use(Vuelidate);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -15,10 +19,17 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
-Vue.component('item-crud', require('./components/ItemCrud.vue'));
-Vue.component('crud', require('./components/Crud.vue'));
-Vue.component('modal', require('./components/Modal.vue'));
+Vue.component('example', require('./components/Example.vue').default);
+Vue.component('item-crud', require('./components/ItemCrud.vue').default);
+Vue.component('crud', require('./components/Crud.vue').default);
+Vue.component('modal', require('./components/Modal.vue').default);
+// Forms
+Vue.component('form-base', require('./forms/Base.vue').default);
+Vue.component('form-category', require('./forms/Category.vue').default);
+Vue.component('form-unit-measure', require('./forms/UnitMeasure').default);
+
+Vue.component('padre', require('./components/padre.vue').default);
+Vue.component('hijo', require('./components/hijo.vue').default);
 const app = new Vue({
     el: '#app'
 });
