@@ -3,21 +3,6 @@
         <form @submit.prevent="handleSubmit">
 
             <div class="form-group row">
-                <label class="col-form-label col-lg-2 font-weight-semibold ">* Nombre</label>
-                <div class="col-lg-10">
-                    <div class="form-group-feedback form-group-feedback-right">
-                        <label>
-                            <input id="categoryData.name" v-model.trim="itemData.name" type="text" class="form-control "
-                                   placeholder="Nombre">
-                        </label>
-                    </div>
-                    <span v-if="!$v.itemData.name.required"
-                          class="form-text text-danger">Le Faltó ingresar el Nombre</span>
-                    <span v-if="!$v.itemData.name.maxLength" class="form-text text-danger">Nombre muy largo</span>
-                </div>
-            </div>
-
-            <div class="form-group row">
                 <label class="col-form-label col-lg-2 font-weight-semibold ">* Descripción</label>
                 <div class="col-lg-10">
                     <div class="form-group-feedback form-group-feedback-right">
@@ -27,11 +12,39 @@
                                    placeholder="Descripcion">
                         </label>
                     </div>
+                    <span v-if="!$v.itemData.description.required"
+                          class="form-text text-danger">
+                        Le Faltó ingresar la Descripcion
+                    </span>
                     <span v-if="!$v.itemData.description.maxLength"
-                          class="form-text text-danger">Descripcion muy larga</span>
+                          class="form-text text-danger">
+                        Descripcion muy larga
+                    </span>
                 </div>
-
             </div>
+
+            <div class="form-group row">
+                <label class="col-form-label col-lg-2 font-weight-semibold ">* Abreviatura</label>
+                <div class="col-lg-10">
+                    <div class="form-group-feedback form-group-feedback-right">
+                        <label>
+                            <input id="categoryData.name" v-model.trim="itemData.abbreviation" type="text" class="form-control "
+                                   placeholder="Abreviatura">
+                        </label>
+                    </div>
+                    <span v-if="!$v.itemData.abbreviation.required"
+                          class="form-text text-danger">
+                        Le Faltó ingresar la Abreviatura
+                    </span>
+                    <span v-if="!$v.itemData.abbreviation.maxLength" class="form-text text-danger">
+                        Abreviatura muy largo
+                    </span>
+                </div>
+            </div>
+
+
+
+
 
             <div class="form-group">
 
@@ -57,8 +70,8 @@
             return {
                 itemData: {
                     id:"",
-                    name: "",
-                    description:"",
+                    description: "",
+                    abbreviation:"",
                 },
                 textBtn:"Operacion",
                 isDisabled:false,
@@ -67,11 +80,12 @@
         },
         validations: {
             itemData: {
-                name: {
-                    required,
-                    maxLength: maxLength(10)
-                },
                 description: {
+                    required,
+                    maxLength: maxLength(40)
+                },
+                abbreviation: {
+                    required,
                     maxLength: maxLength(10)
                 },
             },

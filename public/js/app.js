@@ -2816,6 +2816,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2825,8 +2838,8 @@ __webpack_require__.r(__webpack_exports__);
     return {
       itemData: {
         id: "",
-        name: "",
-        description: ""
+        description: "",
+        abbreviation: ""
       },
       textBtn: "Operacion",
       isDisabled: false,
@@ -2835,11 +2848,12 @@ __webpack_require__.r(__webpack_exports__);
   },
   validations: {
     itemData: {
-      name: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"],
-        maxLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["maxLength"])(10)
-      },
       description: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"],
+        maxLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["maxLength"])(40)
+      },
+      abbreviation: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"],
         maxLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["maxLength"])(10)
       }
     }
@@ -34633,7 +34647,7 @@ var render = function() {
         [
           _c("i", { staticClass: "icon-cog3 mr-2" }),
           _vm._v(" "),
-          _c("label", { domProps: { textContent: _vm._s(_vm.crudName) } })
+          _c("label", [_vm._v(" Agregar")])
         ]
       ),
       _vm._v(" "),
@@ -35366,70 +35380,6 @@ var render = function() {
           _c(
             "label",
             { staticClass: "col-form-label col-lg-2 font-weight-semibold " },
-            [_vm._v("* Nombre")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-10" }, [
-            _c(
-              "div",
-              { staticClass: "form-group-feedback form-group-feedback-right" },
-              [
-                _c("label", [
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model.trim",
-                        value: _vm.itemData.name,
-                        expression: "itemData.name",
-                        modifiers: { trim: true }
-                      }
-                    ],
-                    staticClass: "form-control ",
-                    attrs: {
-                      id: "categoryData.name",
-                      type: "text",
-                      placeholder: "Nombre"
-                    },
-                    domProps: { value: _vm.itemData.name },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(
-                          _vm.itemData,
-                          "name",
-                          $event.target.value.trim()
-                        )
-                      },
-                      blur: function($event) {
-                        return _vm.$forceUpdate()
-                      }
-                    }
-                  })
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            !_vm.$v.itemData.name.required
-              ? _c("span", { staticClass: "form-text text-danger" }, [
-                  _vm._v("Le Faltó ingresar el Nombre")
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            !_vm.$v.itemData.name.maxLength
-              ? _c("span", { staticClass: "form-text text-danger" }, [
-                  _vm._v("Nombre muy largo")
-                ])
-              : _vm._e()
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group row" }, [
-          _c(
-            "label",
-            { staticClass: "col-form-label col-lg-2 font-weight-semibold " },
             [_vm._v("* Descripción")]
           ),
           _vm._v(" "),
@@ -35476,9 +35426,87 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
+            !_vm.$v.itemData.description.required
+              ? _c("span", { staticClass: "form-text text-danger" }, [
+                  _vm._v(
+                    "\n                    Le Faltó ingresar la Descripcion\n                "
+                  )
+                ])
+              : _vm._e(),
+            _vm._v(" "),
             !_vm.$v.itemData.description.maxLength
               ? _c("span", { staticClass: "form-text text-danger" }, [
-                  _vm._v("Descripcion muy larga")
+                  _vm._v(
+                    "\n                    Descripcion muy larga\n                "
+                  )
+                ])
+              : _vm._e()
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group row" }, [
+          _c(
+            "label",
+            { staticClass: "col-form-label col-lg-2 font-weight-semibold " },
+            [_vm._v("* Abreviatura")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-10" }, [
+            _c(
+              "div",
+              { staticClass: "form-group-feedback form-group-feedback-right" },
+              [
+                _c("label", [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model.trim",
+                        value: _vm.itemData.abbreviation,
+                        expression: "itemData.abbreviation",
+                        modifiers: { trim: true }
+                      }
+                    ],
+                    staticClass: "form-control ",
+                    attrs: {
+                      id: "categoryData.name",
+                      type: "text",
+                      placeholder: "Abreviatura"
+                    },
+                    domProps: { value: _vm.itemData.abbreviation },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(
+                          _vm.itemData,
+                          "abbreviation",
+                          $event.target.value.trim()
+                        )
+                      },
+                      blur: function($event) {
+                        return _vm.$forceUpdate()
+                      }
+                    }
+                  })
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            !_vm.$v.itemData.abbreviation.required
+              ? _c("span", { staticClass: "form-text text-danger" }, [
+                  _vm._v(
+                    "\n                    Le Faltó ingresar la Abreviatura\n                "
+                  )
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            !_vm.$v.itemData.abbreviation.maxLength
+              ? _c("span", { staticClass: "form-text text-danger" }, [
+                  _vm._v(
+                    "\n                    Abreviatura muy largo\n                "
+                  )
                 ])
               : _vm._e()
           ])

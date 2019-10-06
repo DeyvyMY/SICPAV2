@@ -11,6 +11,8 @@
 |
  */
 
+use App\Http\Controllers\UnitMeasureController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -33,3 +35,4 @@ Route::get('/ventas/notasdebitoemitidas', 'NotasDebitoEmitidasController@index')
 
 
 Route::resource('categories', 'CategoriesController');
+Route::get('/unitmeasure', 'UnitMeasureController@index')->name('unit de Medida');

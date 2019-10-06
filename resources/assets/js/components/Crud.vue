@@ -3,7 +3,7 @@
         <button type="button" class="btn btn-primary" v-on:click="onAddItem()">
             <i class="icon-cog3 mr-2"></i>
 
-            <label v-text="crudName"></label>
+            <label > Agregar</label>
         </button>
 
 
