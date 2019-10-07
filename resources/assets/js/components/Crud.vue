@@ -3,7 +3,7 @@
         <button type="button" class="btn btn-primary" v-on:click="onAddItem()">
             <i class="icon-cog3 mr-2"></i>
 
-            <label > Agregar</label>
+            <label> Agregar</label>
         </button>
 
 
@@ -34,17 +34,6 @@
                     </td>
 
                 </tr>
-
-                <!--<item-crud
-                        v-for="item in itemsData"
-                        :key="item.id"
-                        :item="item"
-                        @update="onUpdate(index, ...arguments)"
-                        @delete="onDelete(index)">
-
-                    >
-                </item-crud>-->
-
                 </tbody>
             </table>
         </div>
@@ -83,6 +72,7 @@
 
             </template>
         </modal>
+
 
 
     </div>
@@ -131,9 +121,12 @@ PUT|PATCH     /users/{user}               update  users.update
 
             },
             onClickDelete(index) {
+                this.item = this.itemsData[index];
                 this.itemIndex = index;
-                this.itemsData.splice(index, 1);
-                this.item = this.itemsData[0];
+                this.$emit('deleteItem', this.item);
+                this.showModal();
+                //this.itemsData.splice(index, 1);
+                //this.item = this.itemsData[0];
             },
             showModal() {
                 this.isModalVisible = true;
@@ -155,20 +148,21 @@ PUT|PATCH     /users/{user}               update  users.update
                             this.success = await this.save(itemStringify);
                             break;
                         case "UPDATE":
-                            this.success = await this.update(itemId,itemStringify);
+                            this.success = await this.update(itemId, itemStringify);
                             break;
                         case "DELETE":
+                            this.success = await this.delete(itemId, itemStringify);
                             break;
 
                     }
 
                 } catch (err) {
                     this.showErrors(err);
-                    this.success=false;
+                    this.success = false;
 
                 } finally {
                     this.loading = false;
-                    this.$emit('completeOperation',  this.success);
+                    this.$emit('completeOperation', this.success);
                 }
             },
 
@@ -192,7 +186,7 @@ PUT|PATCH     /users/{user}               update  users.update
                 this.addToList(resItem, this.itemIndex);
                 return true;
             },
-            async detele(idItem, item){
+            async delete(idItem, item) {
                 //DELETE        /users/{user}               destroy users.destroy
                 console.log("delete");
                 console.log(item);
@@ -201,24 +195,7 @@ PUT|PATCH     /users/{user}               update  users.update
                 this.addToList(resItem, this.itemIndex);
                 return true;
             },
-            async showResultOf(request) {
-                try {
-                    this.loading = true;
-                    request();
-                    //let res=await axios.post("api/"+this.crudName,qs.stringify(item),config);
-                    //console.log(res);
-                    //this.addToList(res);
-                    // active button
-                    this.success = true;
-                    this.$emit('completeOperation', true);
-                } catch (err) {
-                    this.showErrors(err);
-                    this.$emit('completeOperation', false);
-                } finally {
-                    this.loading = false;
-                }
 
-            },
             // SHOW
             showErrors(err) {
                 if (err.response) {
@@ -264,7 +241,7 @@ PUT|PATCH     /users/{user}               update  users.update
             for ( var i = 0; i< 10 ; i++){
                 this.itemsData.push(this.items[i])
             }*/
-            if(this.items)
+            if (this.items)
                 this.itemsData = this.items;
 
 

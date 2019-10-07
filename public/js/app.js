@@ -1941,16 +1941,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 var qs = __webpack_require__(/*! querystring */ "./node_modules/querystring-es3/index.js");
 
 var config = {
@@ -1987,9 +1977,11 @@ var config = {
       this.showModal();
     },
     onClickDelete: function onClickDelete(index) {
+      this.item = this.itemsData[index];
       this.itemIndex = index;
-      this.itemsData.splice(index, 1);
-      this.item = this.itemsData[0];
+      this.$emit('deleteItem', this.item);
+      this.showModal(); //this.itemsData.splice(index, 1);
+      //this.item = this.itemsData[0];
     },
     showModal: function showModal() {
       this.isModalVisible = true;
@@ -2012,7 +2004,7 @@ var config = {
                 _context.prev = 0;
                 this.loading = true;
                 _context.t0 = typeOperation;
-                _context.next = _context.t0 === "ADD" ? 5 : _context.t0 === "UPDATE" ? 9 : _context.t0 === "DELETE" ? 13 : 14;
+                _context.next = _context.t0 === "ADD" ? 5 : _context.t0 === "UPDATE" ? 9 : _context.t0 === "DELETE" ? 13 : 17;
                 break;
 
               case 5:
@@ -2021,7 +2013,7 @@ var config = {
 
               case 7:
                 this.success = _context.sent;
-                return _context.abrupt("break", 14);
+                return _context.abrupt("break", 17);
 
               case 9:
                 _context.next = 11;
@@ -2029,33 +2021,38 @@ var config = {
 
               case 11:
                 this.success = _context.sent;
-                return _context.abrupt("break", 14);
+                return _context.abrupt("break", 17);
 
               case 13:
-                return _context.abrupt("break", 14);
+                _context.next = 15;
+                return this["delete"](itemId, itemStringify);
 
-              case 14:
-                _context.next = 20;
+              case 15:
+                this.success = _context.sent;
+                return _context.abrupt("break", 17);
+
+              case 17:
+                _context.next = 23;
                 break;
 
-              case 16:
-                _context.prev = 16;
+              case 19:
+                _context.prev = 19;
                 _context.t1 = _context["catch"](0);
                 this.showErrors(_context.t1);
                 this.success = false;
 
-              case 20:
-                _context.prev = 20;
+              case 23:
+                _context.prev = 23;
                 this.loading = false;
                 this.$emit('completeOperation', this.success);
-                return _context.finish(20);
+                return _context.finish(23);
 
-              case 24:
+              case 27:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[0, 16, 20, 24]]);
+        }, _callee, this, [[0, 19, 23, 27]]);
       }));
 
       function crudOperation(_x, _x2, _x3) {
@@ -2134,8 +2131,8 @@ var config = {
 
       return update;
     }(),
-    detele: function () {
-      var _detele = _asyncToGenerator(
+    "delete": function () {
+      var _delete2 = _asyncToGenerator(
       /*#__PURE__*/
       _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4(idItem, item) {
         var res, resItem;
@@ -2163,49 +2160,11 @@ var config = {
         }, _callee4, this);
       }));
 
-      function detele(_x7, _x8) {
-        return _detele.apply(this, arguments);
+      function _delete(_x7, _x8) {
+        return _delete2.apply(this, arguments);
       }
 
-      return detele;
-    }(),
-    showResultOf: function () {
-      var _showResultOf = _asyncToGenerator(
-      /*#__PURE__*/
-      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee5(request) {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee5$(_context5) {
-          while (1) {
-            switch (_context5.prev = _context5.next) {
-              case 0:
-                try {
-                  this.loading = true;
-                  request(); //let res=await axios.post("api/"+this.crudName,qs.stringify(item),config);
-                  //console.log(res);
-                  //this.addToList(res);
-                  // active button
-
-                  this.success = true;
-                  this.$emit('completeOperation', true);
-                } catch (err) {
-                  this.showErrors(err);
-                  this.$emit('completeOperation', false);
-                } finally {
-                  this.loading = false;
-                }
-
-              case 1:
-              case "end":
-                return _context5.stop();
-            }
-          }
-        }, _callee5, this);
-      }));
-
-      function showResultOf(_x9) {
-        return _showResultOf.apply(this, arguments);
-      }
-
-      return showResultOf;
+      return _delete;
     }(),
     // SHOW
     showErrors: function showErrors(err) {
@@ -2559,6 +2518,15 @@ var qs = __webpack_require__(/*! querystring */ "./node_modules/querystring-es3/
       _this.fillForm(item);
 
       _this.operation = "UPDATE";
+    });
+    this.on("deleteItem", function (item) {
+      _this.setButtonText("Eliminar");
+
+      _this.activeForm(true);
+
+      _this.fillForm(item);
+
+      _this.operation = "DELETE";
     });
     this.on("completeOperation", function (isSuccess) {
       _this.activeForm(true);

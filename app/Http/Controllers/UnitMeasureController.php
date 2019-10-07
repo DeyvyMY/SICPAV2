@@ -91,7 +91,7 @@ class UnitMeasureController extends Controller
                 ["errors" => $exception->getMessage()],
                 JsonResponse::HTTP_BAD_REQUEST);
         }
-        return response()->json(["UnitMeasure" => null],
+        return response()->json(["UnitMeasure" => "Destroy"],
             JsonResponse::HTTP_NO_CONTENT);
     }
 }

@@ -40,6 +40,12 @@
                 this.fillForm(item);
                 this.operation="UPDATE";
             });
+            this.on("deleteItem", (item)=> {
+                this.setButtonText("Eliminar");
+                this.activeForm(true);
+                this.fillForm(item);
+                this.operation="DELETE";
+            });
             this.on("completeOperation",(isSuccess)=>{
                 this.activeForm(true);
                 if(isSuccess){
