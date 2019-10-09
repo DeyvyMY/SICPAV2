@@ -132,7 +132,7 @@
 									<div class="dropdown-item-group mb-3 mb-md-0">
 										<ul class="list-unstyled">
 											<li>
-												<a href="#" class="dropdown-item rounded">
+												<a href="/products" class="dropdown-item rounded">
 													<i class="icon-cube4"></i>
 													Productos
 												</a>

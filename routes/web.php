@@ -35,6 +35,8 @@ Route::get('/ventas/notasdebitoemitidas', 'NotasDebitoEmitidasController@index')
 
 
 //rutas producto
+Route::get('/products', 'ProductsController@index')->name('productos');
+
 Route::get('/categories', 'CategoriesController@index');
 //Rutas Entidades
 Route::get('/proveedores', 'ProveedorController@index');

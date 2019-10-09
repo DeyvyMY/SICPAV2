@@ -1,5 +1,5 @@
 <template>
-    <div id="modal_form_horizontal" class="modal fade show" tabindex="-1" style="display: block; padding-right: 15px;">
+    <div id="modal_form_vertical" class="modal fade show" tabindex="-1" style="display: block; padding-right: 15px;">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
 

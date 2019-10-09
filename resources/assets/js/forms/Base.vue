@@ -1,5 +1,26 @@
 <template>
-    
+    <!--<div class="form-group">
+        <div class="row">
+
+            <div class="col-xl-5"><label>*Codigo</label>
+
+                <input v-model.trim="itemData.code"
+                       type="text"
+                       placeholder="Ingrese codigo"
+                       class="form-control">
+
+                <span v-if="!$v.itemData.code.required"
+                      class="form-text text-danger">
+                            Por favor ingrese el codigo de producto
+                        </span>
+                <span v-if="!$v.itemData.code.maxLength"
+                      class="form-text text-danger">
+                            codigo muy largo
+                        </span>
+            </div>
+
+        </div>
+    </div>-->
 </template>
 
 <script>
