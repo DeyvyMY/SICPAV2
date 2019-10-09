@@ -1,72 +1,61 @@
 <?php
 
-namespace App\Http\Controllers;
 
-use App\TipoGastos;
+namespace App\Utils;
+
+
+use App\Http\Controllers\Controller;
 use App\UnitMeasure;
-use App\Utils\BaseController;
+use App\User;
 use Exception;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 use Symfony\Component\Translation\Exception\NotFoundResourceException;
 
-class TipoGastosController extends BaseController
+class BaseController extends Controller
 {
-    /**
-     * TipoGastosController constructor.
-     */
-    public function __construct()
-    {
-        parent::__construct(TipoGastos::class);
-    }
+    protected  $modelName;
 
 
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * BaseController constructor.
      */
-    public function index()
+    public function __construct(String $className)
     {
-        $tipoGastos = TipoGastos::all();
-        return view("gastos.tipoGastos", compact("tipoGastos"));
+        $this->modelName=$className;
     }
 
 
-
-
-
-
-    /*
     public function store(Request $request)
     {
 
         try {
-            $tipoGasto = new TipoGastos();
-            $tipoGasto->validateAndFill($request->all());
-            $tipoGasto->save();
+
+            $model = new $this->modelName();
+            $model->validateAndFill($request->all());
+            $model->save();
         } catch (ValidationException $exception) {
 
             return response()->json(
                 ["errors" => $exception->validator->getMessageBag()],
                 JsonResponse::HTTP_UNPROCESSABLE_ENTITY);
         }
-        return response()->json(["TipoGasto" => $tipoGasto],
+        return response()->json(["$this->modelName" => $model],
             JsonResponse::HTTP_CREATED);
-
-
     }
 
 
     public function update(Request $request, $id)
     {
         try {
-            $tipoGastoSaved=TipoGastos::find($id);
-            if(!$tipoGastoSaved)
-                throw new NotFoundResourceException("Tipo de Gasto $id Not existe");
-            $tipoGastoSaved->validateAndFill($request->all());
-            $tipoGastoSaved->save();
+
+            $model=$this->modelName::find($id);
+            if(!$model)
+                throw new NotFoundResourceException("$this->modelName $id Not Found");
+            $model->validateAndFill($request->all());
+            $model->save();
         } catch (ValidationException $exception) {
 
             return response()->json(
@@ -79,10 +68,11 @@ class TipoGastosController extends BaseController
                 ["errors" => $notFoundE->getMessage()],
                 JsonResponse::HTTP_NOT_FOUND);
         }
-        return response()->json(["TipoGasto" => $tipoGastoSaved],
+        return response()->json(["$this->modelName" => $model],
             JsonResponse::HTTP_OK);
 
     }
+
 
 
 
@@ -90,18 +80,17 @@ class TipoGastosController extends BaseController
     {
         //
         try {
-            $tipoGasto=TipoGastos::find($id);
-            if(!$tipoGasto)
-                throw new NotFoundResourceException("Tipo de Gatos $id no encontrado");
-            $tipoGasto->delete();
+            $model=$this->modelName::find($id);
+            if(!$model)
+                throw new NotFoundResourceException("$this->modelName $id Not Found");
+            $model->delete();
         } catch (Exception $exception) {
 
             return response()->json(
                 ["errors" => $exception->getMessage()],
                 JsonResponse::HTTP_BAD_REQUEST);
         }
-        return response()->json(["TipoGatos" => "Destroy"],
+        return response()->json(["$this->modelName" => "Destroy","GG"=>"FF"],
             JsonResponse::HTTP_NO_CONTENT);
     }
-    */
 }

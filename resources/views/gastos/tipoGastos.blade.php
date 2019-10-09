@@ -28,7 +28,7 @@
                             <!-- Traffic sources -->
                             <div class="card">
                                 <div class="card-header header-elements-inline bg-success-800">
-                                    <h6 class="card-title">Productos</h6>
+                                    <h6 class="card-title">Tipo De Gastos</h6>
                                     <div class="header-elements">
                                         <div class="list-icons">
                                             <a class="list-icons-item" data-action="collapse"></a>
