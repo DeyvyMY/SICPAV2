@@ -2605,6 +2605,7 @@ var qs = __webpack_require__(/*! querystring */ "./node_modules/querystring-es3/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
 /* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Base */ "./resources/assets/js/forms/Base.vue");
 //
 //
 //
@@ -2664,12 +2665,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
-
-var qs = __webpack_require__(/*! querystring */ "./node_modules/querystring-es3/index.js");
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Category",
-  props: ["item", 'on', 'actions'],
+  "extends": _Base__WEBPACK_IMPORTED_MODULE_1__["default"],
   data: function data() {
     return {
       itemData: {
@@ -2683,95 +2682,14 @@ var qs = __webpack_require__(/*! querystring */ "./node_modules/querystring-es3/
       operation: ""
     };
   },
-  mounted: function mounted() {
-    console.log("mounted category form");
-  },
-  created: function created() {
-    var _this = this;
-
-    console.log("created"); //this.$parent.$on('onShowForm', this.onShowForm);
-    //CRUD
-
-    this.on("addItem", function () {
-      _this.setButtonText("Guardar");
-
-      _this.activeForm(true);
-
-      _this.operation = "ADD";
-
-      _this.clearForm();
-    });
-    this.on("updateItem", function (item) {
-      _this.setButtonText("Guardar Cambios");
-
-      _this.activeForm(true);
-
-      _this.fillForm(item);
-
-      _this.operation = "UPDATE";
-    });
-    this.on("completeOperation", function (isSuccess) {
-      _this.activeForm(true);
-
-      if (isSuccess) {
-        //clear form
-        _this.clearForm();
-      }
-    });
-  },
-  methods: {
-    handleSubmit: function handleSubmit(e) {
-      if (this.$v.$invalid) return;
-      this.activeForm(false);
-      var itemStringify = qs.stringify(this.itemData);
-      this.actions.crudOperation(this.itemData.id, itemStringify, this.operation);
-      /*switch (this.operation) {
-          case "ADD":
-              this.actions.crudOperation(itemStringify);
-              break;
-          case "UPDATE":
-              this.actions.update(this.itemData.id,itemStringify);
-              break;
-          case "DELETE":
-              break;
-       }*/
-    },
-    setButtonText: function setButtonText(text) {
-      this.textBtn = text;
-    },
-    activeForm: function activeForm(isActive) {
-      this.isDisabled = isActive;
-    },
-    clearForm: function clearForm() {
-      var _this2 = this;
-
-      console.log("clearForm");
-      console.log(this.itemData);
-      var keys = Object.keys(this.itemData);
-      keys.forEach(function (k) {
-        _this2.itemData[k] = "";
-      });
-      /*for(let i=0;i<keys.length;i++){
-          console.log(keys[i]);
-          this.itemData[keys[i]]="";
-      }*/
-    },
-    fillForm: function fillForm(item) {
-      var _this3 = this;
-
-      Object.keys(this.itemData).forEach(function (keyForm) {
-        _this3.itemData[keyForm] = item[keyForm];
-      });
-    }
-  },
   validations: {
     itemData: {
       name: {
         required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"],
-        maxLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["maxLength"])(10)
+        maxLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["maxLength"])(20)
       },
       description: {
-        maxLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["maxLength"])(10)
+        maxLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["maxLength"])(50)
       }
     }
   }

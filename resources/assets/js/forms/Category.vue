@@ -58,14 +58,12 @@
 
 <script>
     import {required, maxLength} from 'vuelidate/lib/validators';
-    const qs = require('querystring');
+    import Base from './Base';
+
     export default {
         name: "Category",
-        props: [
-            "item",
-            'on',
-            'actions'
-        ],
+        extends: Base,
+
         data() {
             return {
                 itemData: {
@@ -79,87 +77,15 @@
                 operation:"",
             }
         },
-        mounted() {
-            console.log("mounted category form");
-        },
-        created() {
-            console.log("created");
-            //this.$parent.$on('onShowForm', this.onShowForm);
-            //CRUD
-            this.on("addItem", ()=> {
-                this.setButtonText("Guardar");
-                this.activeForm(true);
-                this.operation="ADD";
-                this.clearForm();
-            });
-            this.on("updateItem", (item)=> {
-                this.setButtonText("Guardar Cambios");
-                this.activeForm(true);
-                this.fillForm(item)
-                this.operation="UPDATE";
-            });
-            this.on("completeOperation",(isSuccess)=>{
-                this.activeForm(true);
-                if(isSuccess){
-                    //clear form
-                    this.clearForm();
-                }
-            })
-        },
-        methods: {
-            handleSubmit(e) {
-                if (this.$v.$invalid) return;
 
-                this.activeForm(false);
-                let itemStringify=qs.stringify(this.itemData);
-                this.actions.crudOperation(this.itemData.id,itemStringify,this.operation);
-
-                /*switch (this.operation) {
-                    case "ADD":
-                        this.actions.crudOperation(itemStringify);
-                        break;
-                    case "UPDATE":
-                        this.actions.update(this.itemData.id,itemStringify);
-                        break;
-                    case "DELETE":
-                        break;
-
-                }*/
-            },
-
-            setButtonText(text){
-                this.textBtn=text;
-            },
-            activeForm(isActive){
-                this.isDisabled=isActive;
-            },
-            clearForm(){
-                console.log("clearForm");
-                console.log(this.itemData);
-                let keys=Object.keys(this.itemData);
-                keys.forEach((k)=>{
-                    this.itemData[k]="";
-                });
-                /*for(let i=0;i<keys.length;i++){
-                    console.log(keys[i]);
-                    this.itemData[keys[i]]="";
-                }*/
-            },
-            fillForm(item){
-                Object.keys(this.itemData).forEach((keyForm)=>{
-                    this.itemData[keyForm]=item[keyForm];
-                });
-            }
-
-        },
         validations: {
             itemData:{
                 name: {
                     required,
-                    maxLength: maxLength(10)
+                    maxLength: maxLength(20)
                 },
                 description: {
-                    maxLength: maxLength(10)
+                    maxLength: maxLength(50)
                 },
             },
         },

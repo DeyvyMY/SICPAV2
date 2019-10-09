@@ -14,7 +14,7 @@ class Categories extends BaseModel
 
     //
     protected $validationRules =[
-      "name"=>"required|max:5",
+      "name"=>"required|max:10",
         "description"=>"max:100"
     ];
 
