@@ -51,3 +51,4 @@ Route::get('/clientes/delete', 'ClienteController@delete');
 Route::resource('categories', 'CategoriesController');
 Route::get('/unitmeasure', 'UnitMeasureController@index')->name('unit de Medida');
 
+Route::get('/tipogasto', 'TipoGastosController@index')->name('Tipo de Gastos');

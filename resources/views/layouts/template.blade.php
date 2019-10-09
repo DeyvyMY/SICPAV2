@@ -208,7 +208,7 @@
 												</a>
 											</li>
 											<li>
-												<a href="#" class="dropdown-item rounded">
+												<a href="/tipogasto" class="dropdown-item rounded">
 													<i class="mi-monetization-on"></i>
 													Tipo de Gasto
 												</a>

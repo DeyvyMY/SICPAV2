@@ -2,48 +2,54 @@
     <div>
         <form @submit.prevent="handleSubmit">
 
+            <div class="form-group">
+                <div class="row">
 
-            <div class="form-group row">
-                <label class="col-form-label col-lg-2 font-weight-semibold ">* Nombre</label>
-                <div class="col-lg-10">
-                    <div class="form-group-feedback form-group-feedback-right">
-                        <label>
-                            <input id="categoryData.name" v-model.trim="itemData.name" type="text" class="form-control "
-                                   placeholder="Nombre">
-                        </label>
-                    </div>
-                    <span v-if="!$v.itemData.name.required" class="form-text text-danger">Le Faltó ingresar el Nombre</span>
-                    <span v-if="!$v.itemData.name.maxLength" class="form-text text-danger">Nombre muy largo</span>
-                </div>
-            </div>
+                    <div class="col-xl-6"><label>*Nombre</label>
 
-            <div class="form-group row">
-                <label class="col-form-label col-lg-2 font-weight-semibold ">* Descripción</label>
-                <div class="col-lg-10">
-                    <div class="form-group-feedback form-group-feedback-right">
-                        <label>
-                            <input id="categoryData.description" v-model.trim="itemData.description" type="text" class="form-control "
-                                   placeholder="Descripcion">
-                        </label>
-                    </div>
-                    <span v-if="!$v.itemData.description.maxLength" class="form-text text-danger">Descripcion muy larga</span>
-                </div>
+                        <input v-model.trim="itemData.name"
+                               type="text"
+                               placeholder="Ingrese Nombre"
+                               class="form-control">
 
-            </div>
-
-            <div class="form-group row">
-                <label class="col-form-label col-lg-2 font-weight-semibold ">* family_id</label>
-                <div class="col-lg-10">
-                    <div class="form-group-feedback form-group-feedback-right">
-                        <label>
-                            <input id="family_id" v-model.trim="itemData.family_id" type="text" class="form-control "
-                                   placeholder="family_id">
-                        </label>
+                        <span v-if="!$v.itemData.name.required" class="form-text text-danger">Le Faltó ingresar el Nombre</span>
+                        <span v-if="!$v.itemData.name.maxLength" class="form-text text-danger">Nombre muy largo</span>
                     </div>
 
                 </div>
-
             </div>
+
+            <div class="form-group">
+                <div class="row">
+
+                    <div class="col-xl-6"><label>*Descripción</label>
+
+                        <input v-model.trim="itemData.description"
+                               type="text"
+                               placeholder="Ingrese Descripción"
+                               class="form-control">
+
+                        <span v-if="!$v.itemData.description.maxLength" class="form-text text-danger">Descripcion muy larga</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+
+                    <div class="col-xl-6"><label>*family_id</label>
+
+                        <input v-model.trim="itemData.family_id"
+                               type="text"
+                               placeholder="por ejemplo:345432"
+                               class="form-control">
+                    </div>
+
+                </div>
+            </div>
+
+
 
             <div class="form-group">
 
