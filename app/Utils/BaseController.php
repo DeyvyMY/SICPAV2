@@ -90,7 +90,8 @@ class BaseController extends Controller
                 ["errors" => $exception->getMessage()],
                 JsonResponse::HTTP_BAD_REQUEST);
         }
-        return response()->json(["$this->modelName" => "Destroy","GG"=>"FF"],
-            JsonResponse::HTTP_NO_CONTENT);
+        return response()->json(["$this->modelName" => "destroy"],
+        JsonResponse::HTTP_ACCEPTED);
+        //HTTP NO CONTENT
     }
 }

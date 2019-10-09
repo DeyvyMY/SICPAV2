@@ -2149,7 +2149,7 @@ var config = {
               case 4:
                 res = _context4.sent;
                 resItem = this.getDataOfResponse(res);
-                this.addToList(resItem, this.itemIndex);
+                this.addToList(null, this.itemIndex);
                 return _context4.abrupt("return", true);
 
               case 8:

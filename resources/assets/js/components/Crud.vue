@@ -192,7 +192,7 @@ PUT|PATCH     /users/{user}               update  users.update
                 console.log(item);
                 let res = await axios.delete("api/" + this.crudName + "/" + idItem, item, config);
                 let resItem = this.getDataOfResponse(res);
-                this.addToList(resItem, this.itemIndex);
+                this.addToList(null, this.itemIndex);
                 return true;
             },
 
