@@ -32,6 +32,7 @@ Vue.component('form-base', require('./forms/Base.vue').default);
 Vue.component('form-category', require('./forms/Category.vue').default);
 Vue.component('form-unit-measure', require('./forms/UnitMeasure').default);
 Vue.component('form-product', require('./forms/Product').default);
+Vue.component('form-vendor', require('./forms/Vendor').default);
 // form Gastos
 Vue.component('form-tipo-gastos', require('./forms/TipoGasto').default);
 

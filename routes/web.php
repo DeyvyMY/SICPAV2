@@ -46,6 +46,7 @@ Route::get('/clientes', 'ClienteController@index');
 Route::get('/clientes/create', 'ClienteController@create');
 Route::get('/clientes/delete', 'ClienteController@delete');
 
+Route::get('/vendors', 'VendorsController@index')->name('Vendedores');
 
 
 Route::resource('categories', 'CategoriesController');

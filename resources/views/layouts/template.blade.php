@@ -188,7 +188,7 @@
 												</a>
 											</li>
 											<li>
-												<a href="#" class="dropdown-item rounded">
+												<a href="/vendors" class="dropdown-item rounded">
 													<i class="mi-face"></i>
 													Vendedores
 												</a>

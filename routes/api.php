@@ -21,3 +21,5 @@ Route::resource('products', "ProductsController");
 Route::resource('categories', 'CategoriesController');
 Route::resource('unitmeasure', "UnitMeasureController");
 Route::resource('tipogastos', "TipoGastosController");
+
+Route::resource('vendors', "VendorsController");
