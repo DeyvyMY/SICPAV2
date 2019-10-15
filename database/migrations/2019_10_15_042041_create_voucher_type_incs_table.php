@@ -17,8 +17,8 @@ class CreateVoucherTypeIncsTable extends Migration
             $table->increments('id');
             $table->string('description');
             $table->string('code');
-            $table->unsignedInteger('voucher_type_id');
-            $table->foreign('voucher_type_id')->references('id')->on('voucher_type');
+            $table->integer('voucher_type_id')->unsigned();
+            $table->foreign('voucher_type_id')->references('id')->on('voucher_types');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateVoucherTypeIncsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('voucher_type_inc');
+        Schema::drop('voucher_type_inc');
     }
 }
