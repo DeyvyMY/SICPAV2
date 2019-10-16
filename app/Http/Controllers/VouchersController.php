@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Entidad;
-use App\TipoGastos;
 use App\Vendors;
 use App\Vouchers;
 use App\VoucherType;
@@ -17,11 +16,11 @@ class VouchersController extends Controller
 
     public function index()
     {
-        $tipoGastos = TipoGastos::all();
-        $vendors    = Vendors::all(["name", "id"]);
-        $entidades  = Entidad::all(["ent_id", "ent_rz"]);
-        $types      = VoucherType::all(["id", "description"]);
-        return view("vouchers.buy", ["tipoGastos" => $tipoGastos, "vendors" => $vendors, "entities" => $entidades, "types" => $types]);
+        $vouchers  = Vouchers::all();
+        $vendors   = Vendors::all(["name", "id"]);
+        $entidades = Entidad::all(["ent_id", "ent_rz"]);
+        $types     = VoucherType::all(["id", "description"]);
+        return view("vouchers.buy", ["vouchers" => $vouchers, "vendors" => $vendors, "entities" => $entidades, "types" => $types]);
     }
 
     public function store(Request $request)
