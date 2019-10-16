@@ -35,6 +35,8 @@ Vue.component('form-product', require('./forms/Product').default);
 Vue.component('form-vendor', require('./forms/Vendor').default);
 // form Gastos
 Vue.component('form-tipo-gastos', require('./forms/TipoGasto').default);
+// form Vouchers
+Vue.component('form-voucher-buy', require('./forms/Vouchers/Buy').default);
 
 Vue.component('padre', require('./components/padre.vue').default);
 Vue.component('hijo', require('./components/hijo.vue').default);

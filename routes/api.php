@@ -23,3 +23,4 @@ Route::resource('unitmeasure', "UnitMeasureController");
 Route::resource('tipogastos', "TipoGastosController");
 
 Route::resource('vendors', "VendorsController");
+Route::resource('vouchers', "VouchersController");

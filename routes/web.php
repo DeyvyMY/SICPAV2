@@ -53,3 +53,4 @@ Route::resource('categories', 'CategoriesController');
 Route::get('/unitmeasure', 'UnitMeasureController@index')->name('unit de Medida');
 
 Route::get('/tipogasto', 'TipoGastosController@index')->name('Tipo de Gastos');
+Route::get('/vouchers', 'VouchersController@index')->name('Compras');

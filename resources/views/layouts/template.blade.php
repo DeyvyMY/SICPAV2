@@ -241,7 +241,7 @@
 									<div class="dropdown-item-group mb-3 mb-md-0">
 										<ul class="list-unstyled">
 											<li>
-												<a href="/compras" class="dropdown-item rounded">
+												<a href="/vouchers" class="dropdown-item rounded">
 													<i class="icon-cart-add2"></i>
 													Compras
 												</a>

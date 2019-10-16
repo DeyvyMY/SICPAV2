@@ -3321,6 +3321,318 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/assets/js/forms/Vouchers/Buy.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/assets/js/forms/Vouchers/Buy.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Base */ "./resources/assets/js/forms/Base.vue");
+/* harmony import */ var vue_cool_select__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-cool-select */ "./node_modules/vue-cool-select/dist/bundle-esm.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Buy",
+  components: {
+    CoolSelect: vue_cool_select__WEBPACK_IMPORTED_MODULE_2__["CoolSelect"]
+  },
+  props: ["entities", "vendors", "types"],
+  "extends": _Base__WEBPACK_IMPORTED_MODULE_1__["default"],
+  data: function data() {
+    return {
+      itemData: {
+        id: "",
+        number: "",
+        entity_id: "",
+        lastName: "",
+        type: "",
+        date: "",
+        guide: "",
+        vendor_id: "",
+        condition: "",
+        exchangeRate: "",
+        paymentDate: "",
+        bank: "",
+        numOperation: "",
+        total: ""
+      },
+      textBtn: "Operacion",
+      isDisabled: false,
+      operation: ""
+    };
+  },
+  validations: {
+    itemData: {
+      number: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"],
+        maxLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["maxLength"])(20)
+      },
+      lastName: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"],
+        maxLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["maxLength"])(100)
+      },
+      entity_id: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      },
+      type: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"],
+        maxLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["maxLength"])(50)
+      },
+      date: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"],
+        maxLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["maxLength"])(50)
+      },
+      guide: {
+        maxLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["maxLength"])(50)
+      },
+      vendor_id: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      }
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap-sass/assets/javascripts/bootstrap.js":
 /*!*********************************************************************!*\
   !*** ./node_modules/bootstrap-sass/assets/javascripts/bootstrap.js ***!
@@ -39557,6 +39869,580 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/assets/js/forms/Vouchers/Buy.vue?vue&type=template&id=3f73968e&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/assets/js/forms/Vouchers/Buy.vue?vue&type=template&id=3f73968e&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c(
+      "form",
+      {
+        on: {
+          submit: function($event) {
+            $event.preventDefault()
+            return _vm.handleSubmit($event)
+          }
+        }
+      },
+      [
+        _c("div", { staticClass: "form-group" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-xl-6" }, [
+              _c("label", [_vm._v("*Nombre")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model.trim",
+                    value: _vm.itemData.number,
+                    expression: "itemData.number",
+                    modifiers: { trim: true }
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { type: "text", placeholder: "Ingrese El Numero" },
+                domProps: { value: _vm.itemData.number },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.itemData, "number", $event.target.value.trim())
+                  },
+                  blur: function($event) {
+                    return _vm.$forceUpdate()
+                  }
+                }
+              }),
+              _vm._v(" "),
+              !_vm.$v.itemData.number.required
+                ? _c("span", { staticClass: "form-text text-danger" }, [
+                    _vm._v(
+                      "\n                        Le Faltó ingresar el Numero\n                        "
+                    )
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              !_vm.$v.itemData.number.maxLength
+                ? _c("span", { staticClass: "form-text text-danger" }, [
+                    _vm._v(
+                      "\n                        Numero muy  larga solo 50 caracteres.\n                        "
+                    )
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-xl-6" }, [
+              _c("label", [_vm._v("*Proveedor\n                        ")]),
+              _vm._v(" "),
+              _c(
+                "label",
+                [
+                  _c("cool-select", {
+                    attrs: {
+                      items: _vm.entities,
+                      placeholder: "Seleciona El Proveedor",
+                      "item-text": "ent_rz",
+                      "item-value": "ent_id"
+                    },
+                    model: {
+                      value: _vm.itemData.entity_id,
+                      callback: function($$v) {
+                        _vm.$set(_vm.itemData, "entity_id", $$v)
+                      },
+                      expression: "itemData.entity_id"
+                    }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              !_vm.$v.itemData.category_id.required
+                ? _c("span", { staticClass: "form-text text-danger" }, [
+                    _vm._v(
+                      "\n                        Tiene que Haber Un Proveedor.\n                        "
+                    )
+                  ])
+                : _vm._e()
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-xl-6" }, [
+              _c("label", [_vm._v("*Tipo\n                        ")]),
+              _vm._v(" "),
+              _c(
+                "label",
+                [
+                  _c("cool-select", {
+                    attrs: {
+                      items: _vm.types,
+                      placeholder: "Seleciona El tipo",
+                      "item-text": "description",
+                      "item-value": "id"
+                    },
+                    model: {
+                      value: _vm.itemData.type,
+                      callback: function($$v) {
+                        _vm.$set(_vm.itemData, "type", $$v)
+                      },
+                      expression: "itemData.type"
+                    }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              !_vm.$v.itemData.type.required
+                ? _c("span", { staticClass: "form-text text-danger" }, [
+                    _vm._v(
+                      "\n                        Tiene ser de Un Tipo.\n                        "
+                    )
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-xl-6" }, [
+              _c("label", [_vm._v("*Fecha")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "input-group" }, [
+                _vm._m(0),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model.trim",
+                      value: _vm.itemData.date,
+                      expression: "itemData.date",
+                      modifiers: { trim: true }
+                    }
+                  ],
+                  staticClass: "form-control daterange-single",
+                  attrs: { type: "text", placeholder: "03/18/2013" },
+                  domProps: { value: _vm.itemData.date },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.itemData, "date", $event.target.value.trim())
+                    },
+                    blur: function($event) {
+                      return _vm.$forceUpdate()
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              !_vm.$v.itemData.date.required
+                ? _c("span", { staticClass: "form-text text-danger" }, [
+                    _vm._v(
+                      "\n                        Le Faltó ingresarLa Fecha\n                        "
+                    )
+                  ])
+                : _vm._e()
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-xl-7" }, [
+              _c("label", [_vm._v("Guia De Remisión")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model.trim",
+                    value: _vm.itemData.guide,
+                    expression: "itemData.guide",
+                    modifiers: { trim: true }
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { type: "text", placeholder: "Ingrese observaciones" },
+                domProps: { value: _vm.itemData.guide },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.itemData, "guide", $event.target.value.trim())
+                  },
+                  blur: function($event) {
+                    return _vm.$forceUpdate()
+                  }
+                }
+              }),
+              _vm._v(" "),
+              !_vm.$v.itemData.guide.maxLength
+                ? _c("span", { staticClass: "form-text text-danger" }, [
+                    _vm._v(
+                      "\n                            Observacion muy largo\n                        "
+                    )
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-xl-6" }, [
+              _c("label", [_vm._v("*Vendedor\n                        ")]),
+              _vm._v(" "),
+              _c(
+                "label",
+                [
+                  _c("cool-select", {
+                    attrs: {
+                      items: _vm.vendors,
+                      placeholder: "Seleciona Vendedor",
+                      "item-text": "name",
+                      "item-value": "id"
+                    },
+                    model: {
+                      value: _vm.itemData.vendor_id,
+                      callback: function($$v) {
+                        _vm.$set(_vm.itemData, "vendor_id", $$v)
+                      },
+                      expression: "itemData.vendor_id"
+                    }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              !_vm.$v.itemData.vendor_id.required
+                ? _c("span", { staticClass: "form-text text-danger" }, [
+                    _vm._v(
+                      "\n                        Tiene ser haber Un Vendedor.\n                        "
+                    )
+                  ])
+                : _vm._e()
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-xl-5" }, [
+              _c("label", [_vm._v("*Condición")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model.trim",
+                    value: _vm.itemData.condition,
+                    expression: "itemData.condition",
+                    modifiers: { trim: true }
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { type: "text", placeholder: "Ingrese la condition" },
+                domProps: { value: _vm.itemData.condition },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(
+                      _vm.itemData,
+                      "condition",
+                      $event.target.value.trim()
+                    )
+                  },
+                  blur: function($event) {
+                    return _vm.$forceUpdate()
+                  }
+                }
+              }),
+              _vm._v(" "),
+              !_vm.$v.itemData.condition.maxLength
+                ? _c("span", { staticClass: "form-text text-danger" }, [
+                    _vm._v(
+                      "\n                            Condición muy largo\n                        "
+                    )
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-xl-5" }, [
+              _c("label", [_vm._v("*Moneda")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model.trim",
+                    value: _vm.itemData.exchangeRate,
+                    expression: "itemData.exchangeRate",
+                    modifiers: { trim: true }
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { type: "text", placeholder: "Ingrese la Moneda" },
+                domProps: { value: _vm.itemData.exchangeRate },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(
+                      _vm.itemData,
+                      "exchangeRate",
+                      $event.target.value.trim()
+                    )
+                  },
+                  blur: function($event) {
+                    return _vm.$forceUpdate()
+                  }
+                }
+              }),
+              _vm._v(" "),
+              !_vm.$v.itemData.exchangeRate.maxLength
+                ? _c("span", { staticClass: "form-text text-danger" }, [
+                    _vm._v(
+                      "\n                            Moneda muy largo\n                        "
+                    )
+                  ])
+                : _vm._e()
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-xl-5" }, [
+              _c("label", [_vm._v("*Fecha De Pago O Deposito")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "input-group" }, [
+                _vm._m(1),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model.trim",
+                      value: _vm.itemData.paymentDate,
+                      expression: "itemData.paymentDate",
+                      modifiers: { trim: true }
+                    }
+                  ],
+                  staticClass: "form-control daterange-single",
+                  attrs: { type: "text", placeholder: "03/18/2013" },
+                  domProps: { value: _vm.itemData.paymentDate },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.itemData,
+                        "paymentDate",
+                        $event.target.value.trim()
+                      )
+                    },
+                    blur: function($event) {
+                      return _vm.$forceUpdate()
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _vm._m(2)
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-xl-4" }, [
+              _c("label", [_vm._v("*Entidad Bancaria")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model.trim",
+                    value: _vm.itemData.bank,
+                    expression: "itemData.bank",
+                    modifiers: { trim: true }
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { type: "text", placeholder: "Ingrese la condition" },
+                domProps: { value: _vm.itemData.bank },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.itemData, "bank", $event.target.value.trim())
+                  },
+                  blur: function($event) {
+                    return _vm.$forceUpdate()
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-xl-4" }, [
+              _c("label", [_vm._v("*Numero de Operacion")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model.trim",
+                    value: _vm.itemData.numOperation,
+                    expression: "itemData.numOperation",
+                    modifiers: { trim: true }
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { type: "text", placeholder: "Tipo de Cambio" },
+                domProps: { value: _vm.itemData.numOperation },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(
+                      _vm.itemData,
+                      "numOperation",
+                      $event.target.value.trim()
+                    )
+                  },
+                  blur: function($event) {
+                    return _vm.$forceUpdate()
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-xl-4" }, [
+              _c("label", [_vm._v("*Monto")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model.trim",
+                    value: _vm.itemData.total,
+                    expression: "itemData.total",
+                    modifiers: { trim: true }
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { type: "text", placeholder: "Tipo de Cambio" },
+                domProps: { value: _vm.itemData.total },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.itemData, "total", $event.target.value.trim())
+                  },
+                  blur: function($event) {
+                    return _vm.$forceUpdate()
+                  }
+                }
+              })
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn bg-teal-400 ml-2",
+              attrs: {
+                disabled: !_vm.isDisabled,
+                type: "button",
+                id: "spinner-dark-2"
+              },
+              on: { click: _vm.handleSubmit }
+            },
+            [
+              _c("i", {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: !_vm.isDisabled,
+                    expression: "!isDisabled"
+                  }
+                ],
+                staticClass: "icon-spinner2 spinner mr-2"
+              }),
+              _vm._v(
+                "\n                    " +
+                  _vm._s(_vm.textBtn) +
+                  "\n                "
+              )
+            ]
+          )
+        ])
+      ]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "input-group-prepend" }, [
+      _c("span", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "icon-calendar22" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "input-group-prepend" }, [
+      _c("span", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "icon-calendar22" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-xl-5" }, [
+      _c("label", [_vm._v("*Tipo de Cambio")]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control",
+        attrs: { type: "text", placeholder: "Tipo de Cambio" }
+      })
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js":
 /*!********************************************************************!*\
   !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
@@ -53666,7 +54552,9 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('form-unit-measure', __webp
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('form-product', __webpack_require__(/*! ./forms/Product */ "./resources/assets/js/forms/Product.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('form-vendor', __webpack_require__(/*! ./forms/Vendor */ "./resources/assets/js/forms/Vendor.vue")["default"]); // form Gastos
 
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('form-tipo-gastos', __webpack_require__(/*! ./forms/TipoGasto */ "./resources/assets/js/forms/TipoGasto.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('form-tipo-gastos', __webpack_require__(/*! ./forms/TipoGasto */ "./resources/assets/js/forms/TipoGasto.vue")["default"]); // form Vouchers
+
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('form-voucher-buy', __webpack_require__(/*! ./forms/Vouchers/Buy */ "./resources/assets/js/forms/Vouchers/Buy.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('padre', __webpack_require__(/*! ./components/padre.vue */ "./resources/assets/js/components/padre.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('hijo', __webpack_require__(/*! ./components/hijo.vue */ "./resources/assets/js/components/hijo.vue")["default"]);
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
@@ -54553,6 +55441,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Vendor_vue_vue_type_template_id_2345bf0c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Vendor_vue_vue_type_template_id_2345bf0c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/forms/Vouchers/Buy.vue":
+/*!****************************************************!*\
+  !*** ./resources/assets/js/forms/Vouchers/Buy.vue ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Buy_vue_vue_type_template_id_3f73968e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Buy.vue?vue&type=template&id=3f73968e&scoped=true& */ "./resources/assets/js/forms/Vouchers/Buy.vue?vue&type=template&id=3f73968e&scoped=true&");
+/* harmony import */ var _Buy_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Buy.vue?vue&type=script&lang=js& */ "./resources/assets/js/forms/Vouchers/Buy.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Buy_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Buy_vue_vue_type_template_id_3f73968e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Buy_vue_vue_type_template_id_3f73968e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "3f73968e",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/assets/js/forms/Vouchers/Buy.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/assets/js/forms/Vouchers/Buy.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************!*\
+  !*** ./resources/assets/js/forms/Vouchers/Buy.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Buy_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Buy.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/assets/js/forms/Vouchers/Buy.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Buy_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/assets/js/forms/Vouchers/Buy.vue?vue&type=template&id=3f73968e&scoped=true&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/assets/js/forms/Vouchers/Buy.vue?vue&type=template&id=3f73968e&scoped=true& ***!
+  \***********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Buy_vue_vue_type_template_id_3f73968e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Buy.vue?vue&type=template&id=3f73968e&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/assets/js/forms/Vouchers/Buy.vue?vue&type=template&id=3f73968e&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Buy_vue_vue_type_template_id_3f73968e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Buy_vue_vue_type_template_id_3f73968e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
