@@ -36,7 +36,7 @@
                             </cool-select>
                         </label>
 
-                        <span v-if="!$v.itemData.category_id.required"
+                        <span v-if="!$v.itemData.entity_id.required"
                               class="form-text text-danger">
                         Tiene que Haber Un Proveedor.
                         </span>

@@ -17,7 +17,7 @@ class CreateVoucherTypeIncsTable extends Migration
             $table->increments('id');
             $table->string('description');
             $table->string('code');
-            $table->integer('voucher_type_id')->unsigned();
+            $table->unsignedInteger('voucher_type_id');
             $table->foreign('voucher_type_id')->references('id')->on('voucher_types');
             $table->timestamps();
         });

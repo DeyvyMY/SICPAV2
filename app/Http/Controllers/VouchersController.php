@@ -17,11 +17,11 @@ class VouchersController extends Controller
 
     public function index()
     {
-        $tipoGastos = TipoGastos::all();
+        $vochersBuy = Vouchers::all();
         $vendors    = Vendors::all(["name", "id"]);
         $entidades  = Entidad::all(["ent_id", "ent_rz"]);
         $types      = VoucherType::all(["id", "description"]);
-        return view("vouchers.buy", ["tipoGastos" => $tipoGastos, "vendors" => $vendors, "entities" => $entidades, "types" => $types]);
+        return view("vouchers.buy", ["vouchers" => $vochersBuy, "vendors" => $vendors, "entities" => $entidades, "types" => $types]);
     }
 
     public function store(Request $request)

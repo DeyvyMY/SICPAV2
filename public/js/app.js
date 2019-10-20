@@ -39969,7 +39969,7 @@ var render = function() {
                 1
               ),
               _vm._v(" "),
-              !_vm.$v.itemData.category_id.required
+              !_vm.$v.itemData.entity_id.required
                 ? _c("span", { staticClass: "form-text text-danger" }, [
                     _vm._v(
                       "\n                        Tiene que Haber Un Proveedor.\n                        "

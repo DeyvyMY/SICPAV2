@@ -96,6 +96,7 @@
                                                     <div class="chart" id="d3-bar-stacked-multiples"><svg><g transform="translate(60,5)" width="334"></g></svg></div>
                                                 </div>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -103,8 +104,15 @@
                         </div>
                         <!-- /traffic sources -->
                     </div>
+
                 </div>
                 <!-- /main charts -->
+                <div class="row">
+                    <div class="col-xl-12">
+                        <iframe width="1200" height="900" src="https://datastudio.google.com/embed/reporting/ed2b4aa7-d8c1-422d-b15f-05dce94da187/page/6zXD" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
             </div>
             <!-- /content area -->
         </div>
