@@ -2,7 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Entidad;
+use App\Vendors;
+use App\Vouchers;
+use App\VoucherType;
+use Exception;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 
 class NotasDebitoEmitidasController extends Controller
 {
@@ -19,7 +26,11 @@ class NotasDebitoEmitidasController extends Controller
 
     public function index()
     {
-        return view('salidas.notasdebito.mostrar');
+        $vouchers  = Vouchers::all();
+        $vendors   = Vendors::all(["name", "id"]);
+        $entidades = Entidad::all(["ent_id", "ent_rz"]);
+        $types     = VoucherType::all(["id", "description"]);
+        return view("vouchers.saledebitnote", ["vouchers" => $vouchers, "vendors" => $vendors, "entities" => $entidades, "types" => $types]);
     }
 
     /**
