@@ -30,7 +30,7 @@ class NotasCreditoEmitidasController extends Controller
         $vendors   = Vendors::all(["name", "id"]);
         $entidades = Entidad::all(["ent_id", "ent_rz"]);
         $types     = VoucherType::all(["id", "description"]);
-        return view("vouchers.salecreditnote", ["vouchers" => $vouchers, "vendors" => $vendors, "entities" => $entidades, "types" => $types]);
+        return view("vouchers.saleCreditNote", ["vouchers" => $vouchers, "vendors" => $vendors, "entities" => $entidades, "types" => $types]);
     }
 
     /**
