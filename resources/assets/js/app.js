@@ -12,6 +12,11 @@ import Vue from 'vue';
 
 import Vuelidate from 'vuelidate';
 import { CoolSelectPlugin } from 'vue-cool-select'
+import VModal from 'vue-js-modal'
+
+
+
+Vue.use(VModal, { componentName: "v-modal" });
 
 Vue.use(Vuelidate);
 Vue.use(CoolSelectPlugin);

@@ -289,6 +289,12 @@
                 guide: {
                     maxLength: maxLength(50)
                 },
+                exchangeRate:{
+                    maxLength:maxLength(20)
+                },
+                condition:{
+                    maxLength:maxLength(20)
+                },
                 vendor_id: {
                     required,
                 }

@@ -39,8 +39,8 @@
         </div>
 
         <modal v-show="isModalVisible"
-               @close="closeModal"
-        >
+               @close="closeModal">
+
 
             <template slot="body">
 
@@ -71,7 +71,8 @@
                 </div>
 
             </template>
-        </modal>
+
+      </modal>
 
 
 
@@ -130,11 +131,13 @@ PUT|PATCH     /users/{user}               update  users.update
             },
             showModal() {
                 this.isModalVisible = true;
+
                 this.success = false;
                 this.errors.length = 0;
                 this.loading = false;
             },
             closeModal() {
+
                 this.isModalVisible = false;
             },
 
