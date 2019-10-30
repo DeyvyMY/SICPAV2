@@ -31,23 +31,6 @@
 					<th width="20" height="25">Correo Electronico</th>
 					<th width="20" height="25">Teléfono de Contacto</th>
 				</tr>
-				@if(sizeof($clients) > 0)
-					@foreach ($clients as $client)
-						<tr style="font-family: consolas;">
-							<th width="20" height="25">{{$client->ent_ruc}}</th>
-							<th width="20" height="25">{{$client->ent_rz}}</th>
-							<th width="20" height="25">{{$client->ent_dir}}</th>
-							<th width="20" height="25">{{$client->ent_dpto}}</th>
-							<th width="20" height="25">{{$client->ent_ciu}}</th>
-							<th width="20" height="25">{{$client->ent_prov}}</th>
-							<th width="20" height="25">Distrito</th>
-							<th width="20" height="25">Teléfono</th>
-							<th width="20" height="25">{{$client->ent_cont}}</th>
-							<th width="20" height="25">{{$client->ent_correo}}</th>
-							<th width="20" height="25">{{$client->ent_ctel}}</th>
-					</tr>
-					@endforeach
-				@endif
 			</table>
 		</div>
   </body>
