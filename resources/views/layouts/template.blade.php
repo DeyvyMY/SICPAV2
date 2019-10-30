@@ -318,7 +318,7 @@
 					</div>
 				</li>
 				<li class="nav-item">
-					<a href="#" class="navbar-nav-link">
+					<a href="/reports" class="navbar-nav-link">
 						<i class="mi-pie-chart"></i>
 						Reportes
 					</a>

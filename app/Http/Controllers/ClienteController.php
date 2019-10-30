@@ -104,4 +104,11 @@ class ClienteController extends Controller
 
         return "eliminado";
     }
+
+    public function export(){
+
+        $clients = Entidad::where('tent_id', '2')->get();
+        //return view('reports.index');
+        return view('reports.entities.clientsexcel', ['clients' => $clients]);
+    }
 }

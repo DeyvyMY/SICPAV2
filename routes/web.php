@@ -45,6 +45,7 @@ Route::get('/proveedores/delete', 'ProveedorController@delete');
 Route::get('/clientes', 'ClienteController@index');
 Route::get('/clientes/create', 'ClienteController@create');
 Route::get('/clientes/delete', 'ClienteController@delete');
+Route::get('/clientes/export', 'ClienteController@export');
 
 Route::get('/vendors', 'VendorsController@index')->name('Vendedores');
 
@@ -54,3 +55,5 @@ Route::get('/unitmeasure', 'UnitMeasureController@index')->name('unit de Medida'
 
 Route::get('/tipogasto', 'TipoGastosController@index')->name('Tipo de Gastos');
 Route::get('/vouchers', 'VouchersController@index')->name('Compras');
+
+Route::get('/reports', 'ReportController@index')->name('Reportes');
