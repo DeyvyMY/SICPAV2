@@ -10,7 +10,7 @@
 			<table class="table">
 				<tr style="font-family: consolas;">
 					<th colspan="5">
-						<img src="Images/logo.jpg">
+						
 					</th>
 				</tr>
 				<tr style="font-family: consolas; font-size: 50px;">
