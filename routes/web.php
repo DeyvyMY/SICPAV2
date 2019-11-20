@@ -57,3 +57,6 @@ Route::get('/tipogasto', 'TipoGastosController@index')->name('Tipo de Gastos');
 Route::get('/vouchers', 'VouchersController@index')->name('Compras');
 
 Route::get('/reports', 'ReportController@index')->name('Reportes');
+
+Route::get('/kardex','KardexController@index')->name('Kardex');
+Route::get('/kardex/export', 'KardexController@export');

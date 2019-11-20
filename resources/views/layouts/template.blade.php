@@ -324,7 +324,7 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a href="#" class="navbar-nav-link">
+					<a href="/kardex" class="navbar-nav-link">
 						<i class="mi-event-note"></i>
 						Kardex
 					</a>
